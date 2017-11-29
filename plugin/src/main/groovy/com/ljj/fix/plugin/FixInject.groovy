@@ -10,10 +10,13 @@ import org.gradle.api.Project
 
 public class FixInject {
   private static ClassPool pool = ClassPool.getDefault()
-  private static String injectStr = "System.out.println(\"I Love HuaChao\" ); ";
+  private static String injectStr = "System.out.println(com.ljj.hack.Hack.class);";
   public static Project project;
   public static void setProject(Project pro){
     project=pro;
+  }
+  public static void injectlibPath(libPath){
+    pool.appendClassPath(libPath)
   }
   public static void injectDir(String path, String packageName) {
     pool.appendClassPath(path)
@@ -27,9 +30,10 @@ public class FixInject {
         if (filePath.endsWith(".class")
             && !filePath.contains('R$')
             && !filePath.contains('R.class')
-            && !filePath.contains("BuildConfig.class")) {
+            && !filePath.contains("BuildConfig.class")
+                &&!filePath.contains("Application")//application不能打，暂时写死
+         ) {//
           // 判断当前目录是否是在我们的应用包里面
-          project.getLogger().error("xxxxxxxxxxxx"+packageName)
           int index = filePath.indexOf(packageName); boolean isMyPackage = index != -1;
           project.getLogger().error("xxxxxxxxxxxxisMyPackage  "+isMyPackage)
           if (isMyPackage) {
@@ -47,10 +51,10 @@ public class FixInject {
             if (cts == null || cts.length == 0) {
               //手动创建一个构造函数
               CtConstructor constructor = new CtConstructor(new CtClass[0], c)
-              constructor.insertBeforeBody(injectStr)
+              constructor.insertAfter(injectStr)
               c.addConstructor(constructor)
             } else {
-              cts[0].insertBeforeBody(injectStr)
+              cts[0].insertAfter(injectStr)
             }
             c.writeFile(path)
             c.detach()

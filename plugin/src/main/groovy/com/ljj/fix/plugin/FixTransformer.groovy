@@ -3,6 +3,7 @@ package com.ljj.fix.plugin
 import com.android.build.api.transform.*
 import com.android.build.gradle.internal.pipeline.TransformManager
 import org.gradle.api.Project
+import org.apache.commons.io.FileUtils;
 /**
  * Created by ljj on 2017/11/27.
  */
@@ -53,7 +54,7 @@ public class FixTransformer extends Transform{
         project.getLogger().error("context->directoryOutput：" + dest);
         FixInject.setProject(project);
         //ByteCodeUtil.inject(directoryInput.getFile().getAbsolutePath(),packageName);
-        FixInject.injectDir(directoryInput.getFile().getAbsolutePath(),"com/ljj/gradleplugin");
+        FixInject.injectDir(directoryInput.getFile().getAbsolutePath(),"com/ljj/fixtest");
         FileUtils.copyDirectory(directoryInput.getFile(), dest);
       }
       for (JarInput jarInput : jarInputs) {

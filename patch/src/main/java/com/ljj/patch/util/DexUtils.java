@@ -1,10 +1,8 @@
 package com.ljj.patch.util;
 
-import java.io.File;
 import java.lang.reflect.Array;
 
 import android.content.Context;
-import android.os.Environment;
 import android.util.Log;
 
 import dalvik.system.DexClassLoader;
@@ -16,16 +14,9 @@ import dalvik.system.DexClassLoader;
 public class DexUtils {
 
 
-  public static void inject(Context context){
-    String dexPath= Environment.getExternalStorageDirectory().getAbsolutePath()+File.separator+"patch.dex";
-    File file=new File(dexPath);
-    if(file.exists()){
-      Log.i("ljj", "inject: ");
-      inject(dexPath,context);
-    }
-  }
 
-  public static void inject(String dexPath,Context context){
+
+  public static void inject(Context context,String dexPath){
     try {
       Class<?> cl = Class.forName("dalvik.system.BaseDexClassLoader");
       Object originPathList=ReflectionUtils.getField(cl,DexUtils.class.getClassLoader(),"pathList");

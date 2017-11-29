@@ -8,10 +8,6 @@ import android.util.Log;
 
 public class Test {
 
-  public Test(){
-    System.out.println(Patch.log()+"");
-  }
-
   public String showTest1(){
     Log.i("ljj", "showTest1: ");
     Log.i("ljj", "showTest2: ");
