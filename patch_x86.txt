@@ -1,0 +1,393 @@
+MAGIC:
+oat
+064
+
+CHECKSUM:
+0x2b7d0274
+
+INSTRUCTION SET:
+X86
+
+INSTRUCTION SET FEATURES:
+smp,-ssse3,-sse4.1,-sse4.2,-avx,-avx2
+
+DEX FILE COUNT:
+1
+
+EXECUTABLE OFFSET:
+0x00001000
+
+INTERPRETER TO INTERPRETER BRIDGE OFFSET:
+0x00000000
+
+INTERPRETER TO COMPILED CODE BRIDGE OFFSET:
+0x00000000
+
+JNI DLSYM LOOKUP OFFSET:
+0x00000000
+
+QUICK GENERIC JNI TRAMPOLINE OFFSET:
+0x00000000
+
+QUICK IMT CONFLICT TRAMPOLINE OFFSET:
+0x00000000
+
+QUICK RESOLUTION TRAMPOLINE OFFSET:
+0x00000000
+
+QUICK TO INTERPRETER BRIDGE OFFSET:
+0x00000000
+
+IMAGE PATCH DELTA:
+7200768 (0x006de000)
+
+IMAGE FILE LOCATION OAT CHECKSUM:
+0xbc44bb0b
+
+IMAGE FILE LOCATION OAT BEGIN:
+0x710b9000
+
+KEY VALUE STORE:
+classpath = 
+debuggable = true
+dex2oat-cmdline = --runtime-arg -classpath --runtime-arg  --debuggable --instruction-set=x86 --instruction-set-features=smp,-ssse3,-sse4.1,-sse4.2,-avx,-avx2 --runtime-arg -Xrelocate --boot-image=/system/framework/boot.art --runtime-arg -Xms64m --runtime-arg -Xmx512m --instruction-set-variant=x86 --instruction-set-features=default --dex-file=/storage/emulated/0/patch.dex --oat-file=/data/user/0/com.ljj.fixtest/app_odex/patch.dex
+dex2oat-host = X86
+image-location = /data/dalvik-cache/x86/system@framework@boot.art
+pic = true
+
+SIZE:
+5026
+
+OatDexFile:
+location: /storage/emulated/0/patch.dex
+checksum: 0x9b5d92a5
+0: Lcom/ljj/fixtest/Test; (offset=0x000006b4) (type_idx=2) (StatusInitialized) (OatClassAllCompiled)
+  0: void com.ljj.fixtest.Test.<init>() (dex_method_idx=1)
+    DEX CODE:
+      0x0000: 7010 0500 0200           	| invoke-direct {v2}, void java.lang.Object.<init>() // method@5
+      0x0003: 6200 0000                	| sget-object  v0, Ljava/io/PrintStream; java.lang.System.out // field@0
+      0x0005: 1c01 0300                	| const-class v1, com.ljj.hack.Hack // type@3
+      0x0007: 6e20 0400 1000           	| invoke-virtual {v0, v1}, void java.io.PrintStream.println(java.lang.Object) // method@4
+      0x000a: 0e00                     	| return-void
+    OatMethodOffsets (offset=0x000006b8)
+      code_offset: 0x0000101c 
+      gc_map: (offset=0x000006c4)
+    OatQuickMethodHeader (offset=0x00001000)
+      mapping_table: (offset=0x0000071e)
+      vmap_table: (offset=0x0000075e)
+      v3/r5, v0/r6, v1/r7, v65535/r16
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 48
+      core_spill_mask: 0x000100e0 (r5, r6, r7, r16)
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	locals: v0[sp + #20] v1[sp + #24]
+      	ins: v2[sp + #52]
+      	method*: v3[sp + #0]
+      	outs: v0[sp + #4] v1[sp + #8]
+    CODE: (code_offset=0x0000101c size_offset=0x00001018 size=152)...
+      0x0000101c:         85842400E0FFFF    	       test eax, [esp + -8192]
+      suspend point dex PC: 0x0000
+      GC map objects:  v2 ([sp + #52])
+      0x00001023:                 83EC2C    	       sub esp, 44
+      0x00001026:               896C2420    	       mov [esp + 32], ebp
+      0x0000102a:               89742424    	       mov [esp + 36], esi
+      0x0000102e:               897C2428    	       mov [esp + 40], edi
+      0x00001032:                   8BE8    	       mov ebp, eax
+      0x00001034:                 890424    	       mov [esp], eax
+      0x00001037:               894C2434    	       mov [esp + 52], ecx
+      0x0000103b:               8B4C2434    	       mov ecx, [esp + 52]
+      0x0000103f:                   8BC5    	       mov eax, ebp
+      0x00001041:                 8B4004    	       mov eax, [eax + 4]
+      0x00001044:                 8B4020    	       mov eax, [eax + 32]
+      0x00001047:                 FF5024    	       call [eax + 36]
+      suspend point dex PC: 0x0000
+      GC map objects:  v2 ([sp + #52])
+      0x0000104a:                 8B4508    	       mov eax, [ebp + 8]
+      0x0000104d:                 8B4028    	       mov eax, [eax + 40]
+      0x00001050:                   85C0    	       test eax, eax
+      0x00001052:                   7447    	       jz/eq +71 (0x0000109b)
+      0x00001054:         83B8840000000A    	       cmp [eax + 132], 10
+      0x0000105b:                   7C3E    	       jl/nge +62 (0x0000109b)
+      0x0000105d:           8BB0D0010000    	       mov esi, [eax + 464]
+      0x00001063:             B803000000    	       mov eax, 3
+      0x00001068:         64FF1544010000    	       call fs:[0x144]  ; pInitializeTypeAndVerifyAccess
+      suspend point dex PC: 0x0005
+      GC map objects:  v0 (r6), v2 ([sp + #52])
+      0x0000106f:                   8BF8    	       mov edi, eax
+      0x00001071:                   8BD7    	       mov edx, edi
+      0x00001073:                   8BCE    	       mov ecx, esi
+      0x00001075:                   8B01    	       mov eax, [ecx]
+      suspend point dex PC: 0x0007
+      GC map objects:  v0 (r6), v1 (r7), v2 ([sp + #52])
+      0x00001077:           8B8038020000    	       mov eax, [eax + 568]
+      0x0000107d:                 FF5024    	       call [eax + 36]
+      suspend point dex PC: 0x0007
+      GC map objects:  v0 (r6), v1 (r7), v2 ([sp + #52])
+      0x00001080:     6466833D0000000000    	       cmpw fs:[0x0], 0  ; state_and_flags
+      0x00001089:                   751E    	       jnz/ne +30 (0x000010a9)
+      0x0000108b:               8B6C2420    	       mov ebp, [esp + 32]
+      0x0000108f:               8B742424    	       mov esi, [esp + 36]
+      0x00001093:               8B7C2428    	       mov edi, [esp + 40]
+      0x00001097:                 83C42C    	       add esp, 44
+      0x0000109a:                     C3    	       ret 
+      0x0000109b:             B807000000    	       mov eax, 7
+      0x000010a0:         64FF1540010000    	       call fs:[0x140]  ; pInitializeStaticStorage
+      suspend point dex PC: 0x0003
+      GC map objects:  v2 ([sp + #52])
+      0x000010a7:                   EBB4    	       jmp -76 (0x0000105d)
+      0x000010a9:         64FF155C020000    	       call fs:[0x25c]  ; pTestSuspend
+      suspend point dex PC: 0x000a
+      0x000010b0:                   EBD9    	       jmp -39 (0x0000108b)
+      0x000010b2:                   0000    	       addb [eax], al
+  1: java.lang.String com.ljj.fixtest.Test.showTest1() (dex_method_idx=2)
+    DEX CODE:
+      0x0000: 1a00 1000                	| const-string v0, "ljj" // string@16
+      0x0002: 1a01 1500                	| const-string v1, "showTest1: " // string@21
+      0x0004: 7120 0000 1000           	| invoke-static {v0, v1}, int android.util.Log.i(java.lang.String, java.lang.String) // method@0
+      0x0007: 1a00 1000                	| const-string v0, "ljj" // string@16
+      0x0009: 1a01 1600                	| const-string v1, "showTest2: " // string@22
+      0x000b: 7120 0000 1000           	| invoke-static {v0, v1}, int android.util.Log.i(java.lang.String, java.lang.String) // method@0
+      0x000e: 1a00 1000                	| const-string v0, "ljj" // string@16
+      0x0010: 1a01 1700                	| const-string v1, "showTest3: " // string@23
+      0x0012: 7120 0000 1000           	| invoke-static {v0, v1}, int android.util.Log.i(java.lang.String, java.lang.String) // method@0
+      0x0015: 1a00 0e00                	| const-string v0, "art address error" // string@14
+      0x0017: 1100                     	| return-object v0
+    OatMethodOffsets (offset=0x000006bc)
+      code_offset: 0x000010dc 
+      gc_map: (offset=0x000006d6)
+    OatQuickMethodHeader (offset=0x000010c0)
+      mapping_table: (offset=0x0000072e)
+      vmap_table: (offset=0x00000763)
+      v65535/r8
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 32
+      core_spill_mask: 0x00000100 (r8)
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	locals: v0[sp + #16] v1[sp + #20]
+      	ins: v2[sp + #36]
+      	method*: v3[sp + #0]
+      	outs: v0[sp + #4] v1[sp + #8]
+    CODE: (code_offset=0x000010dc size_offset=0x000010d8 size=584)...
+      0x000010dc:         85842400E0FFFF    	       test eax, [esp + -8192]
+      suspend point dex PC: 0x0000
+      GC map objects:  v2 ([sp + #36])
+      0x000010e3:                 83EC1C    	       sub esp, 28
+      0x000010e6:                 890424    	       mov [esp], eax
+      0x000010e9:               894C2424    	       mov [esp + 36], ecx
+      0x000010ed:     6466833D0000000000    	       cmpw fs:[0x0], 0  ; state_and_flags
+      0x000010f6:           0F853F010000    	       jnz/ne +319 (0x0000123b)
+      0x000010fc:                 8B0424    	       mov eax, [esp]
+      0x000010ff:                   8B00    	       mov eax, [eax]
+      0x00001101:                 8B4014    	       mov eax, [eax + 20]
+      0x00001104:                 8B404C    	       mov eax, [eax + 76]
+      0x00001107:                   85C0    	       test eax, eax
+      0x00001109:           0F8438010000    	       jz/eq +312 (0x00001247)
+      0x0000110f:               89442410    	       mov [esp + 16], eax
+      0x00001113:                 8B0424    	       mov eax, [esp]
+      0x00001116:                   8B00    	       mov eax, [eax]
+      0x00001118:                 8B4014    	       mov eax, [eax + 20]
+      0x0000111b:                 8B4060    	       mov eax, [eax + 96]
+      0x0000111e:                   85C0    	       test eax, eax
+      0x00001120:           0F8432010000    	       jz/eq +306 (0x00001258)
+      0x00001126:               89442414    	       mov [esp + 20], eax
+      0x0000112a:                 8B0424    	       mov eax, [esp]
+      0x0000112d:                 8B4008    	       mov eax, [eax + 8]
+      0x00001130:                 8B4010    	       mov eax, [eax + 16]
+      0x00001133:                   85C0    	       test eax, eax
+      0x00001135:           0F842E010000    	       jz/eq +302 (0x00001269)
+      0x0000113b:         83B8840000000A    	       cmp [eax + 132], 10
+      0x00001142:           0F8C32010000    	       jl/nge +306 (0x0000127a)
+      0x00001148:               8B4C2410    	       mov ecx, [esp + 16]
+      0x0000114c:               8B542414    	       mov edx, [esp + 20]
+      0x00001150:                 8B0424    	       mov eax, [esp]
+      0x00001153:                 8B4004    	       mov eax, [eax + 4]
+      0x00001156:                 8B400C    	       mov eax, [eax + 12]
+      0x00001159:                 FF5024    	       call [eax + 36]
+      suspend point dex PC: 0x0004
+      GC map objects:  v0 ([sp + #16]), v1 ([sp + #20]), v2 ([sp + #36])
+      0x0000115c:                 8B0424    	       mov eax, [esp]
+      0x0000115f:                   8B00    	       mov eax, [eax]
+      0x00001161:                 8B4014    	       mov eax, [eax + 20]
+      0x00001164:                 8B404C    	       mov eax, [eax + 76]
+      0x00001167:                   85C0    	       test eax, eax
+      0x00001169:           0F841C010000    	       jz/eq +284 (0x0000128b)
+      0x0000116f:               89442410    	       mov [esp + 16], eax
+      0x00001173:                 8B0424    	       mov eax, [esp]
+      0x00001176:                   8B00    	       mov eax, [eax]
+      0x00001178:                 8B4014    	       mov eax, [eax + 20]
+      0x0000117b:                 8B4064    	       mov eax, [eax + 100]
+      0x0000117e:                   85C0    	       test eax, eax
+      0x00001180:           0F8416010000    	       jz/eq +278 (0x0000129c)
+      0x00001186:               89442414    	       mov [esp + 20], eax
+      0x0000118a:                 8B0424    	       mov eax, [esp]
+      0x0000118d:                 8B4008    	       mov eax, [eax + 8]
+      0x00001190:                 8B4010    	       mov eax, [eax + 16]
+      0x00001193:                   85C0    	       test eax, eax
+      0x00001195:           0F8412010000    	       jz/eq +274 (0x000012ad)
+      0x0000119b:         83B8840000000A    	       cmp [eax + 132], 10
+      0x000011a2:           0F8C16010000    	       jl/nge +278 (0x000012be)
+      0x000011a8:               8B4C2410    	       mov ecx, [esp + 16]
+      0x000011ac:               8B542414    	       mov edx, [esp + 20]
+      0x000011b0:                 8B0424    	       mov eax, [esp]
+      0x000011b3:                 8B4004    	       mov eax, [eax + 4]
+      0x000011b6:                 8B400C    	       mov eax, [eax + 12]
+      0x000011b9:                 FF5024    	       call [eax + 36]
+      suspend point dex PC: 0x000b
+      GC map objects:  v0 ([sp + #16]), v1 ([sp + #20]), v2 ([sp + #36])
+      0x000011bc:                 8B0424    	       mov eax, [esp]
+      0x000011bf:                   8B00    	       mov eax, [eax]
+      0x000011c1:                 8B4014    	       mov eax, [eax + 20]
+      0x000011c4:                 8B404C    	       mov eax, [eax + 76]
+      0x000011c7:                   85C0    	       test eax, eax
+      0x000011c9:           0F8400010000    	       jz/eq +256 (0x000012cf)
+      0x000011cf:               89442410    	       mov [esp + 16], eax
+      0x000011d3:                 8B0424    	       mov eax, [esp]
+      0x000011d6:                   8B00    	       mov eax, [eax]
+      0x000011d8:                 8B4014    	       mov eax, [eax + 20]
+      0x000011db:                 8B4068    	       mov eax, [eax + 104]
+      0x000011de:                   85C0    	       test eax, eax
+      0x000011e0:           0F84FA000000    	       jz/eq +250 (0x000012e0)
+      0x000011e6:               89442414    	       mov [esp + 20], eax
+      0x000011ea:                 8B0424    	       mov eax, [esp]
+      0x000011ed:                 8B4008    	       mov eax, [eax + 8]
+      0x000011f0:                 8B4010    	       mov eax, [eax + 16]
+      0x000011f3:                   85C0    	       test eax, eax
+      0x000011f5:           0F84F6000000    	       jz/eq +246 (0x000012f1)
+      0x000011fb:         83B8840000000A    	       cmp [eax + 132], 10
+      0x00001202:           0F8CFA000000    	       jl/nge +250 (0x00001302)
+      0x00001208:               8B4C2410    	       mov ecx, [esp + 16]
+      0x0000120c:               8B542414    	       mov edx, [esp + 20]
+      0x00001210:                 8B0424    	       mov eax, [esp]
+      0x00001213:                 8B4004    	       mov eax, [eax + 4]
+      0x00001216:                 8B400C    	       mov eax, [eax + 12]
+      0x00001219:                 FF5024    	       call [eax + 36]
+      suspend point dex PC: 0x0012
+      GC map objects:  v0 ([sp + #16]), v1 ([sp + #20]), v2 ([sp + #36])
+      0x0000121c:                 8B0424    	       mov eax, [esp]
+      0x0000121f:                   8B00    	       mov eax, [eax]
+      0x00001221:                 8B4014    	       mov eax, [eax + 20]
+      0x00001224:                 8B4044    	       mov eax, [eax + 68]
+      0x00001227:                   85C0    	       test eax, eax
+      0x00001229:           0F84E4000000    	       jz/eq +228 (0x00001313)
+      0x0000122f:               89442410    	       mov [esp + 16], eax
+      0x00001233:               8B442410    	       mov eax, [esp + 16]
+      0x00001237:                 83C41C    	       add esp, 28
+      0x0000123a:                     C3    	       ret 
+      0x0000123b:         64FF155C020000    	       call fs:[0x25c]  ; pTestSuspend
+      suspend point dex PC: 0x0000
+      GC map objects:  v2 ([sp + #36])
+      0x00001242:             E9B5FEFFFF    	       jmp -331 (0x000010fc)
+      0x00001247:             B810000000    	       mov eax, 16
+      0x0000124c:         64FF154C010000    	       call fs:[0x14c]  ; pResolveString
+      suspend point dex PC: 0x0000
+      GC map objects:  v2 ([sp + #36])
+      0x00001253:             E9B7FEFFFF    	       jmp -329 (0x0000110f)
+      0x00001258:             B815000000    	       mov eax, 21
+      0x0000125d:         64FF154C010000    	       call fs:[0x14c]  ; pResolveString
+      suspend point dex PC: 0x0002
+      GC map objects:  v0 ([sp + #16]), v2 ([sp + #36])
+      0x00001264:             E9BDFEFFFF    	       jmp -323 (0x00001126)
+      0x00001269:             B801000000    	       mov eax, 1
+      0x0000126e:         64FF1548010000    	       call fs:[0x148]  ; pInitializeType
+      suspend point dex PC: 0x0004
+      GC map objects:  v0 ([sp + #16]), v1 ([sp + #20]), v2 ([sp + #36])
+      0x00001275:             E9C1FEFFFF    	       jmp -319 (0x0000113b)
+      0x0000127a:             B801000000    	       mov eax, 1
+      0x0000127f:         64FF1540010000    	       call fs:[0x140]  ; pInitializeStaticStorage
+      suspend point dex PC: 0x0004
+      GC map objects:  v0 ([sp + #16]), v1 ([sp + #20]), v2 ([sp + #36])
+      0x00001286:             E9BDFEFFFF    	       jmp -323 (0x00001148)
+      0x0000128b:             B810000000    	       mov eax, 16
+      0x00001290:         64FF154C010000    	       call fs:[0x14c]  ; pResolveString
+      suspend point dex PC: 0x0007
+      GC map objects:  v0 ([sp + #16]), v1 ([sp + #20]), v2 ([sp + #36])
+      0x00001297:             E9D3FEFFFF    	       jmp -301 (0x0000116f)
+      0x0000129c:             B816000000    	       mov eax, 22
+      0x000012a1:         64FF154C010000    	       call fs:[0x14c]  ; pResolveString
+      suspend point dex PC: 0x0009
+      GC map objects:  v0 ([sp + #16]), v1 ([sp + #20]), v2 ([sp + #36])
+      0x000012a8:             E9D9FEFFFF    	       jmp -295 (0x00001186)
+      0x000012ad:             B801000000    	       mov eax, 1
+      0x000012b2:         64FF1548010000    	       call fs:[0x148]  ; pInitializeType
+      suspend point dex PC: 0x000b
+      GC map objects:  v0 ([sp + #16]), v1 ([sp + #20]), v2 ([sp + #36])
+      0x000012b9:             E9DDFEFFFF    	       jmp -291 (0x0000119b)
+      0x000012be:             B801000000    	       mov eax, 1
+      0x000012c3:         64FF1540010000    	       call fs:[0x140]  ; pInitializeStaticStorage
+      suspend point dex PC: 0x000b
+      GC map objects:  v0 ([sp + #16]), v1 ([sp + #20]), v2 ([sp + #36])
+      0x000012ca:             E9D9FEFFFF    	       jmp -295 (0x000011a8)
+      0x000012cf:             B810000000    	       mov eax, 16
+      0x000012d4:         64FF154C010000    	       call fs:[0x14c]  ; pResolveString
+      suspend point dex PC: 0x000e
+      GC map objects:  v0 ([sp + #16]), v1 ([sp + #20]), v2 ([sp + #36])
+      0x000012db:             E9EFFEFFFF    	       jmp -273 (0x000011cf)
+      0x000012e0:             B817000000    	       mov eax, 23
+      0x000012e5:         64FF154C010000    	       call fs:[0x14c]  ; pResolveString
+      suspend point dex PC: 0x0010
+      GC map objects:  v0 ([sp + #16]), v1 ([sp + #20]), v2 ([sp + #36])
+      0x000012ec:             E9F5FEFFFF    	       jmp -267 (0x000011e6)
+      0x000012f1:             B801000000    	       mov eax, 1
+      0x000012f6:         64FF1548010000    	       call fs:[0x148]  ; pInitializeType
+      suspend point dex PC: 0x0012
+      GC map objects:  v0 ([sp + #16]), v1 ([sp + #20]), v2 ([sp + #36])
+      0x000012fd:             E9F9FEFFFF    	       jmp -263 (0x000011fb)
+      0x00001302:             B801000000    	       mov eax, 1
+      0x00001307:         64FF1540010000    	       call fs:[0x140]  ; pInitializeStaticStorage
+      suspend point dex PC: 0x0012
+      GC map objects:  v0 ([sp + #16]), v1 ([sp + #20]), v2 ([sp + #36])
+      0x0000130e:             E9F5FEFFFF    	       jmp -267 (0x00001208)
+      0x00001313:             B80E000000    	       mov eax, 14
+      0x00001318:         64FF154C010000    	       call fs:[0x14c]  ; pResolveString
+      suspend point dex PC: 0x0015
+      GC map objects:  v0 ([sp + #16]), v1 ([sp + #20]), v2 ([sp + #36])
+      0x0000131f:             E90BFFFFFF    	       jmp -245 (0x0000122f)
+  2: java.lang.String com.ljj.fixtest.Test.showText() (dex_method_idx=3)
+    DEX CODE:
+      0x0000: 1a00 1200                	| const-string v0, "patch successful! so happy" // string@18
+      0x0002: 1100                     	| return-object v0
+    OatMethodOffsets (offset=0x000006c0)
+      code_offset: 0x0000134c 
+      gc_map: (offset=0x00000712)
+    OatQuickMethodHeader (offset=0x00001330)
+      mapping_table: (offset=0x00000756)
+      vmap_table: (offset=0x00000763)
+      v65535/r8
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 16
+      core_spill_mask: 0x00000100 (r8)
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	locals: v0[sp + #4]
+      	ins: v1[sp + #20]
+      	method*: v2[sp + #0]
+    CODE: (code_offset=0x0000134c size_offset=0x00001348 size=86)...
+      0x0000134c:         85842400E0FFFF    	       test eax, [esp + -8192]
+      suspend point dex PC: 0x0000
+      GC map objects:  v1 ([sp + #20])
+      0x00001353:                 83EC0C    	       sub esp, 12
+      0x00001356:                 890424    	       mov [esp], eax
+      0x00001359:               894C2414    	       mov [esp + 20], ecx
+      0x0000135d:     6466833D0000000000    	       cmpw fs:[0x0], 0  ; state_and_flags
+      0x00001366:           0F851F000000    	       jnz/ne +31 (0x0000138b)
+      0x0000136c:                 8B0424    	       mov eax, [esp]
+      0x0000136f:                   8B00    	       mov eax, [eax]
+      0x00001371:                 8B4014    	       mov eax, [eax + 20]
+      0x00001374:                 8B4054    	       mov eax, [eax + 84]
+      0x00001377:                   85C0    	       test eax, eax
+      0x00001379:           0F8415000000    	       jz/eq +21 (0x00001394)
+      0x0000137f:               89442404    	       mov [esp + 4], eax
+      0x00001383:               8B442404    	       mov eax, [esp + 4]
+      0x00001387:                 83C40C    	       add esp, 12
+      0x0000138a:                     C3    	       ret 
+      0x0000138b:         64FF155C020000    	       call fs:[0x25c]  ; pTestSuspend
+      suspend point dex PC: 0x0000
+      GC map objects:  v1 ([sp + #20])
+      0x00001392:                   EBD8    	       jmp -40 (0x0000136c)
+      0x00001394:             B812000000    	       mov eax, 18
+      0x00001399:         64FF154C010000    	       call fs:[0x14c]  ; pResolveString
+      suspend point dex PC: 0x0000
+      GC map objects:  v1 ([sp + #20])
+      0x000013a0:                   EBDD    	       jmp -35 (0x0000137f)

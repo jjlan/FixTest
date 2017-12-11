@@ -1,0 +1,1059 @@
+MAGIC:
+oat
+045
+
+CHECKSUM:
+0xa02fbcc9
+
+INSTRUCTION SET:
+Thumb2
+
+INSTRUCTION SET FEATURES:
+none
+
+DEX FILE COUNT:
+1
+
+EXECUTABLE OFFSET:
+0x00002000
+
+INTERPRETER TO INTERPRETER BRIDGE OFFSET:
+0x00000000
+
+INTERPRETER TO COMPILED CODE BRIDGE OFFSET:
+0x00000000
+
+JNI DLSYM LOOKUP OFFSET:
+0x00000000
+
+PORTABLE IMT CONFLICT TRAMPOLINE OFFSET:
+0x00000000
+
+PORTABLE RESOLUTION TRAMPOLINE OFFSET:
+0x00000000
+
+PORTABLE TO INTERPRETER BRIDGE OFFSET:
+0x00000000
+
+QUICK GENERIC JNI TRAMPOLINE OFFSET:
+0x00000000
+
+QUICK IMT CONFLICT TRAMPOLINE OFFSET:
+0x00000000
+
+QUICK RESOLUTION TRAMPOLINE OFFSET:
+0x00000000
+
+QUICK TO INTERPRETER BRIDGE OFFSET:
+0x00000000
+
+IMAGE PATCH DELTA:
+16355328 (0x00f99000)
+
+IMAGE FILE LOCATION OAT CHECKSUM:
+0x2a58cd55
+
+IMAGE FILE LOCATION OAT BEGIN:
+0x71910000
+
+KEY VALUE STORE:
+dex2oat-cmdline = --zip-fd=6 --zip-location=/data/app/com.ljj.fixtest-2/base.apk --oat-fd=7 --oat-location=/data/dalvik-cache/arm/data@app@com.ljj.fixtest-2@base.apk@classes.dex --instruction-set=arm --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --swap-fd=13
+dex2oat-host = Arm
+image-location = /data/dalvik-cache/arm/system@framework@boot.art
+pic = false
+
+SIZE:
+9444
+
+OatDexFile:
+location: /data/app/com.ljj.fixtest-2/base.apk
+checksum: 0x8187b962
+0: Lcom/ljj/fixtest/BuildConfig; (offset=0x0000120c) (type_idx=6) (StatusVerified) (OatClassSomeCompiled)
+  0: void com.ljj.fixtest.BuildConfig.<clinit>() (dex_method_idx=6)
+    DEX CODE:
+      0x0000: const-string v0, "true" // string@87
+      0x0002: invoke-static {v0}, boolean java.lang.Boolean.parseBoolean(java.lang.String) // method@23
+      0x0005: move-result v0
+      0x0006: sput-boolean v0, Z com.ljj.fixtest.BuildConfig.DEBUG // field@2
+      0x0008: return-void
+    OatMethodOffsets (offset=0x00000000)
+      code_offset: 0x00000000 
+      gc_map: (offset=0x00000000)
+    OatQuickMethodHeader (offset=0x00000000)
+      mapping_table: (offset=0x00000000)
+      vmap_table: (offset=0x00000000)
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+    CODE: (code_offset=0x00000000 size_offset=0x00000000 size=0)
+      NO CODE!
+  1: void com.ljj.fixtest.BuildConfig.<init>() (dex_method_idx=7)
+    DEX CODE:
+      0x0000: invoke-direct {v0}, void java.lang.Object.<init>() // method@24
+      0x0003: return-void
+    OatMethodOffsets (offset=0x00001218)
+      code_offset: 0x0000201d 
+      gc_map: (offset=0x0000127c)
+    OatQuickMethodHeader (offset=0x00002000)
+      mapping_table: (offset=0x0000130d)
+      vmap_table: (offset=0x00001377)
+      v0/r5, v65534/r6, v65535/r15
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 32
+      core_spill_mask: 0x00008060 (r5, r6, r15)
+      fp_spill_mask: 0x00000000 
+    CODE: (code_offset=0x0000201d size_offset=0x00002018 size=60)...
+      0x0000201c: f5bd5c00	subs    r12, sp, #8192
+      0x00002020: f8dcc000	ldr.w   r12, [r12, #0]
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002024: e92d4060	push    {r5, r6, lr}
+      0x00002028: b085    	sub     sp, sp, #20
+      0x0000202a: 1c06    	mov     r6, r0
+      0x0000202c: 9000    	str     r0, [sp, #0]
+      0x0000202e: 1c0d    	mov     r5, r1
+      0x00002030: f2410e75	movw    lr, #4213
+      0x00002034: f2c73e3b	movt    lr, #29499
+      0x00002038: f24a1098	movw    r0, #41368
+      0x0000203c: f2c71006	movt    r0, #28934
+      0x00002040: 1c29    	mov     r1, r5
+      0x00002042: 47f0    	blx     lr
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002044: 3c01    	subs    r4, #1
+      0x00002046: f0008003	beq.w   +6 (0x00002050)
+      0x0000204a: b005    	add     sp, sp, #20
+      0x0000204c: e8bd8060	pop     {r5, r6, pc}
+      0x00002050: f8d9e230	ldr.w   lr, [r9, #560]  ; pTestSuspend
+      0x00002054: 47f0    	blx     lr
+      suspend point dex PC: 0x0003
+      0x00002056: e7f8    	b       -16 (0x0000204a)
+1: Lcom/ljj/fixtest/MainActivity; (offset=0x0000121c) (type_idx=7) (StatusVerified) (OatClassAllCompiled)
+  0: void com.ljj.fixtest.MainActivity.<init>() (dex_method_idx=8)
+    DEX CODE:
+      0x0000: invoke-direct {v0}, void android.app.Activity.<init>() // method@0
+      0x0003: return-void
+    OatMethodOffsets (offset=0x00001220)
+      code_offset: 0x00002075 
+      gc_map: (offset=0x0000127c)
+    OatQuickMethodHeader (offset=0x00002058)
+      mapping_table: (offset=0x0000130d)
+      vmap_table: (offset=0x00001377)
+      v0/r5, v65534/r6, v65535/r15
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 32
+      core_spill_mask: 0x00008060 (r5, r6, r15)
+      fp_spill_mask: 0x00000000 
+    CODE: (code_offset=0x00002075 size_offset=0x00002070 size=60)...
+      0x00002074: f5bd5c00	subs    r12, sp, #8192
+      0x00002078: f8dcc000	ldr.w   r12, [r12, #0]
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x0000207c: e92d4060	push    {r5, r6, lr}
+      0x00002080: b085    	sub     sp, sp, #20
+      0x00002082: 1c06    	mov     r6, r0
+      0x00002084: 9000    	str     r0, [sp, #0]
+      0x00002086: 1c0d    	mov     r5, r1
+      0x00002088: f64b0e25	movw    lr, #47141
+      0x0000208c: f2c73e98	movt    lr, #29592
+      0x00002090: f64a60b8	movw    r0, #44728
+      0x00002094: f2c71012	movt    r0, #28946
+      0x00002098: 1c29    	mov     r1, r5
+      0x0000209a: 47f0    	blx     lr
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x0000209c: 3c01    	subs    r4, #1
+      0x0000209e: f0008003	beq.w   +6 (0x000020a8)
+      0x000020a2: b005    	add     sp, sp, #20
+      0x000020a4: e8bd8060	pop     {r5, r6, pc}
+      0x000020a8: f8d9e230	ldr.w   lr, [r9, #560]  ; pTestSuspend
+      0x000020ac: 47f0    	blx     lr
+      suspend point dex PC: 0x0003
+      0x000020ae: e7f8    	b       -16 (0x000020a2)
+  1: void com.ljj.fixtest.MainActivity.onCreate(android.os.Bundle) (dex_method_idx=9)
+    DEX CODE:
+      0x0000: invoke-super {v2, v3}, void android.app.Activity.onCreate(android.os.Bundle) // method@1
+      0x0003: new-instance v0, com.ljj.fixtest.Test // type@16
+      0x0005: invoke-direct {v0}, void com.ljj.fixtest.Test.<init>() // method@19
+      0x0008: const/4 v1, #+5
+      0x0009: invoke-virtual {v0, v1}, java.lang.String com.ljj.fixtest.Test.showText(int) // method@21
+      0x000c: return-void
+    OatMethodOffsets (offset=0x00001224)
+      code_offset: 0x000020cd 
+      gc_map: (offset=0x00001286)
+    OatQuickMethodHeader (offset=0x000020b0)
+      mapping_table: (offset=0x00001315)
+      vmap_table: (offset=0x0000137b)
+      v65534/r5, v0/r6, v2/r7, v3/r8, v65535/r15
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 48
+      core_spill_mask: 0x000081e0 (r5, r6, r7, r8, r15)
+      fp_spill_mask: 0x00000000 
+    CODE: (code_offset=0x000020cd size_offset=0x000020c8 size=112)...
+      0x000020cc: f5bd5c00	subs    r12, sp, #8192
+      0x000020d0: f8dcc000	ldr.w   r12, [r12, #0]
+      suspend point dex PC: 0x0000
+      GC map objects:  v2 (r7), v3 (r8)
+      0x000020d4: e92d41e0	push    {r5, r6, r7, r8, lr}
+      0x000020d8: b087    	sub     sp, sp, #28
+      0x000020da: 1c05    	mov     r5, r0
+      0x000020dc: 9000    	str     r0, [sp, #0]
+      0x000020de: 1c0f    	mov     r7, r1
+      0x000020e0: 4690    	mov     r8, r2
+      0x000020e2: f64f3ecd	movw    lr, #64461
+      0x000020e6: f2c73e98	movt    lr, #29592
+      0x000020ea: f64f2078	movw    r0, #64120
+      0x000020ee: f2c71012	movt    r0, #28946
+      0x000020f2: 1c39    	mov     r1, r7
+      0x000020f4: 4642    	mov     r2, r8
+      0x000020f6: 47f0    	blx     lr
+      suspend point dex PC: 0x0000
+      GC map objects:  v2 (r7), v3 (r8)
+      0x000020f8: f8d9e124	ldr.w   lr, [r9, #292]  ; pAllocObject
+      0x000020fc: 1c29    	mov     r1, r5
+      0x000020fe: 2010    	movs    r0, #16
+      0x00002100: 47f0    	blx     lr
+      suspend point dex PC: 0x0003
+      GC map objects:  v2 (r7), v3 (r8)
+      0x00002102: 1c06    	mov     r6, r0
+      0x00002104: 1c28    	mov     r0, r5
+      0x00002106: 68c0    	ldr     r0, [r0, #12]
+      0x00002108: 1c31    	mov     r1, r6
+      0x0000210a: 6d80    	ldr     r0, [r0, #88]
+      0x0000210c: f8d0e02c	ldr.w   lr, [r0, #44]
+      0x00002110: 47f0    	blx     lr
+      suspend point dex PC: 0x0005
+      GC map objects:  v0 (r6), v2 (r7), v3 (r8)
+      0x00002112: 2205    	movs    r2, #5
+      0x00002114: 9205    	str     r2, [sp, #20]
+      0x00002116: 1c28    	mov     r0, r5
+      0x00002118: 68c0    	ldr     r0, [r0, #12]
+      0x0000211a: 1c31    	mov     r1, r6
+      0x0000211c: 2205    	movs    r2, #5
+      0x0000211e: 6e00    	ldr     r0, [r0, #96]
+      0x00002120: f8d0e02c	ldr.w   lr, [r0, #44]
+      0x00002124: 47f0    	blx     lr
+      suspend point dex PC: 0x0009
+      GC map objects:  v0 (r6), v2 (r7), v3 (r8)
+      0x00002126: 3c01    	subs    r4, #1
+      0x00002128: f0008003	beq.w   +6 (0x00002132)
+      0x0000212c: b007    	add     sp, sp, #28
+      0x0000212e: e8bd81e0	pop     {r5, r6, r7, r8, pc}
+      0x00002132: f8d9e230	ldr.w   lr, [r9, #560]  ; pTestSuspend
+      0x00002136: 47f0    	blx     lr
+      suspend point dex PC: 0x000c
+      0x00002138: e7f8    	b       -16 (0x0000212c)
+      0x0000213a: 0000    	lsls    r0, r0, #0
+2: Lcom/ljj/fixtest/MyApplication; (offset=0x00001228) (type_idx=8) (StatusVerified) (OatClassAllCompiled)
+  0: void com.ljj.fixtest.MyApplication.<init>() (dex_method_idx=10)
+    DEX CODE:
+      0x0000: invoke-direct {v0}, void android.app.Application.<init>() // method@2
+      0x0003: return-void
+    OatMethodOffsets (offset=0x0000122c)
+      code_offset: 0x0000215d 
+      gc_map: (offset=0x0000127c)
+    OatQuickMethodHeader (offset=0x00002140)
+      mapping_table: (offset=0x0000130d)
+      vmap_table: (offset=0x00001377)
+      v0/r5, v65534/r6, v65535/r15
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 32
+      core_spill_mask: 0x00008060 (r5, r6, r15)
+      fp_spill_mask: 0x00000000 
+    CODE: (code_offset=0x0000215d size_offset=0x00002158 size=60)...
+      0x0000215c: f5bd5c00	subs    r12, sp, #8192
+      0x00002160: f8dcc000	ldr.w   r12, [r12, #0]
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002164: e92d4060	push    {r5, r6, lr}
+      0x00002168: b085    	sub     sp, sp, #20
+      0x0000216a: 1c06    	mov     r6, r0
+      0x0000216c: 9000    	str     r0, [sp, #0]
+      0x0000216e: 1c0d    	mov     r5, r1
+      0x00002170: f64f7ef5	movw    lr, #65525
+      0x00002174: f2c73ea1	movt    lr, #29601
+      0x00002178: f24910c8	movw    r0, #37320
+      0x0000217c: f2c71013	movt    r0, #28947
+      0x00002180: 1c29    	mov     r1, r5
+      0x00002182: 47f0    	blx     lr
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002184: 3c01    	subs    r4, #1
+      0x00002186: f0008003	beq.w   +6 (0x00002190)
+      0x0000218a: b005    	add     sp, sp, #20
+      0x0000218c: e8bd8060	pop     {r5, r6, pc}
+      0x00002190: f8d9e230	ldr.w   lr, [r9, #560]  ; pTestSuspend
+      0x00002194: 47f0    	blx     lr
+      suspend point dex PC: 0x0003
+      0x00002196: e7f8    	b       -16 (0x0000218a)
+  1: void com.ljj.fixtest.MyApplication.onCreate() (dex_method_idx=11)
+    DEX CODE:
+      0x0000: invoke-super {v3}, void android.app.Application.onCreate() // method@3
+      0x0003: new-instance v1, java.lang.StringBuilder // type@24
+      0x0005: invoke-direct {v1}, void java.lang.StringBuilder.<init>() // method@25
+      0x0008: invoke-static {}, java.io.File android.os.Environment.getExternalStorageDirectory() // method@4
+      0x000b: move-result-object v2
+      0x000c: invoke-virtual {v2}, java.lang.String java.io.File.getAbsolutePath() // method@22
+      0x000f: move-result-object v2
+      0x0010: invoke-virtual {v1, v2}, java.lang.StringBuilder java.lang.StringBuilder.append(java.lang.String) // method@27
+      0x0013: move-result-object v1
+      0x0014: sget-object  v2, Ljava/lang/String; java.io.File.separator // field@14
+      0x0016: invoke-virtual {v1, v2}, java.lang.StringBuilder java.lang.StringBuilder.append(java.lang.String) // method@27
+      0x0019: move-result-object v1
+      0x001a: const-string v2, "patch.dex" // string@75
+      0x001c: invoke-virtual {v1, v2}, java.lang.StringBuilder java.lang.StringBuilder.append(java.lang.String) // method@27
+      0x001f: move-result-object v1
+      0x0020: invoke-virtual {v1}, java.lang.String java.lang.StringBuilder.toString() // method@28
+      0x0023: move-result-object v0
+      0x0024: return-void
+    OatMethodOffsets (offset=0x00001230)
+      code_offset: 0x000021b5 
+      gc_map: (offset=0x00001296)
+    OatQuickMethodHeader (offset=0x00002198)
+      mapping_table: (offset=0x00001323)
+      vmap_table: (offset=0x00001381)
+      v65534/r5, v1/r6, v2/r7, v3/r8, v65535/r15
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 48
+      core_spill_mask: 0x000081e0 (r5, r6, r7, r8, r15)
+      fp_spill_mask: 0x00000000 
+    CODE: (code_offset=0x000021b5 size_offset=0x000021b0 size=292)...
+      0x000021b4: f5bd5c00	subs    r12, sp, #8192
+      0x000021b8: f8dcc000	ldr.w   r12, [r12, #0]
+      suspend point dex PC: 0x0000
+      GC map objects:  v3 (r8)
+      0x000021bc: e92d41e0	push    {r5, r6, r7, r8, lr}
+      0x000021c0: b087    	sub     sp, sp, #28
+      0x000021c2: 1c05    	mov     r5, r0
+      0x000021c4: 9000    	str     r0, [sp, #0]
+      0x000021c6: 4688    	mov     r8, r1
+      0x000021c8: f2410e75	movw    lr, #4213
+      0x000021cc: f2c73e3b	movt    lr, #29499
+      0x000021d0: f2494098	movw    r0, #38040
+      0x000021d4: f2c71013	movt    r0, #28947
+      0x000021d8: 4641    	mov     r1, r8
+      0x000021da: 47f0    	blx     lr
+      suspend point dex PC: 0x0000
+      GC map objects:  v3 (r8)
+      0x000021dc: f8d9e12c	ldr.w   lr, [r9, #300]  ; pAllocObjectInitialized
+      0x000021e0: 1c29    	mov     r1, r5
+      0x000021e2: f6455068	movw    r0, #23912
+      0x000021e6: f2c71073	movt    r0, #29043
+      0x000021ea: 47f0    	blx     lr
+      suspend point dex PC: 0x0003
+      GC map objects:  v3 (r8)
+      0x000021ec: 1c06    	mov     r6, r0
+      0x000021ee: f6426e9d	movw    lr, #11933
+      0x000021f2: f2c73e43	movt    lr, #29507
+      0x000021f6: f6427078	movw    r0, #12152
+      0x000021fa: f2c71008	movt    r0, #28936
+      0x000021fe: 1c31    	mov     r1, r6
+      0x00002200: 47f0    	blx     lr
+      suspend point dex PC: 0x0005
+      GC map objects:  v1 (r6), v3 (r8)
+      0x00002202: 1c28    	mov     r0, r5
+      0x00002204: 68c0    	ldr     r0, [r0, #12]
+      0x00002206: 69c0    	ldr     r0, [r0, #28]
+      0x00002208: f8d0e02c	ldr.w   lr, [r0, #44]
+      0x0000220c: 47f0    	blx     lr
+      suspend point dex PC: 0x0008
+      GC map objects:  v1 (r6), v3 (r8)
+      0x0000220e: 1c07    	mov     r7, r0
+      0x00002210: 1c39    	mov     r1, r7
+      0x00002212: 6808    	ldr     r0, [r1, #0]
+      suspend point dex PC: 0x000c
+      GC map objects:  v1 (r6), v2 (r7), v3 (r8)
+      0x00002214: f8d001c4	ldr.w   r0, [r0, #452]
+      0x00002218: f8d0e02c	ldr.w   lr, [r0, #44]
+      0x0000221c: 47f0    	blx     lr
+      suspend point dex PC: 0x000c
+      GC map objects:  v1 (r6), v2 (r7), v3 (r8)
+      0x0000221e: 1c07    	mov     r7, r0
+      0x00002220: f6454e4d	movw    lr, #23629
+      0x00002224: f2c73e43	movt    lr, #29507
+      0x00002228: f2433068	movw    r0, #13160
+      0x0000222c: f2c71008	movt    r0, #28936
+      0x00002230: 1c31    	mov     r1, r6
+      0x00002232: 1c3a    	mov     r2, r7
+      0x00002234: 47f0    	blx     lr
+      suspend point dex PC: 0x0010
+      GC map objects:  v1 (r6), v2 (r7), v3 (r8)
+      0x00002236: 1c06    	mov     r6, r0
+      0x00002238: 1c29    	mov     r1, r5
+      0x0000223a: 6908    	ldr     r0, [r1, #16]
+      0x0000223c: 6dc0    	ldr     r0, [r0, #92]
+      0x0000223e: b3d8    	cbz     r0, +118 (0x000022b8)
+      0x00002240: 6e82    	ldr     r2, [r0, #104]
+      0x00002242: 2a0a    	cmp     r2, #10
+      0x00002244: db38    	blt     +112 (0x000022b8)
+      0x00002246: f3bf8f5b	dmb     ish
+      0x0000224a: f8d07250	ldr.w   r7, [r0, #592]
+      0x0000224e: f6454e4d	movw    lr, #23629
+      0x00002252: f2c73e43	movt    lr, #29507
+      0x00002256: f2433068	movw    r0, #13160
+      0x0000225a: f2c71008	movt    r0, #28936
+      0x0000225e: 1c31    	mov     r1, r6
+      0x00002260: 1c3a    	mov     r2, r7
+      0x00002262: f8d1c000	ldr.w   r12, [r1, #0]
+      suspend point dex PC: 0x0016
+      GC map objects:  v1 (r6), v2 (r7), v3 (r8)
+      0x00002266: 47f0    	blx     lr
+      suspend point dex PC: 0x0016
+      GC map objects:  v1 (r6), v2 (r7), v3 (r8)
+      0x00002268: 1c06    	mov     r6, r0
+      0x0000226a: 68a8    	ldr     r0, [r5, #8]
+      0x0000226c: 6940    	ldr     r0, [r0, #20]
+      0x0000226e: f8d00138	ldr.w   r0, [r0, #312]
+      0x00002272: b330    	cbz     r0, +76 (0x000022c2)
+      0x00002274: 1c07    	mov     r7, r0
+      0x00002276: f6454e4d	movw    lr, #23629
+      0x0000227a: f2c73e43	movt    lr, #29507
+      0x0000227e: f2433068	movw    r0, #13160
+      0x00002282: f2c71008	movt    r0, #28936
+      0x00002286: 1c31    	mov     r1, r6
+      0x00002288: 1c3a    	mov     r2, r7
+      0x0000228a: f8d1c000	ldr.w   r12, [r1, #0]
+      suspend point dex PC: 0x001c
+      GC map objects:  v1 (r6), v2 (r7), v3 (r8)
+      0x0000228e: 47f0    	blx     lr
+      suspend point dex PC: 0x001c
+      GC map objects:  v1 (r6), v2 (r7), v3 (r8)
+      0x00002290: 1c06    	mov     r6, r0
+      0x00002292: f6463edd	movw    lr, #27613
+      0x00002296: f2c73e43	movt    lr, #29507
+      0x0000229a: f24310b8	movw    r0, #12728
+      0x0000229e: f2c71008	movt    r0, #28936
+      0x000022a2: 1c31    	mov     r1, r6
+      0x000022a4: f8d1c000	ldr.w   r12, [r1, #0]
+      suspend point dex PC: 0x0020
+      GC map objects:  v1 (r6), v2 (r7), v3 (r8)
+      0x000022a8: 47f0    	blx     lr
+      suspend point dex PC: 0x0020
+      GC map objects:  v1 (r6), v2 (r7), v3 (r8)
+      0x000022aa: 9003    	str     r0, [sp, #12]
+      0x000022ac: 3c01    	subs    r4, #1
+      0x000022ae: f000800e	beq.w   +28 (0x000022ce)
+      0x000022b2: b007    	add     sp, sp, #28
+      0x000022b4: e8bd81e0	pop     {r5, r6, r7, r8, pc}
+      0x000022b8: f8d9e144	ldr.w   lr, [r9, #324]  ; pInitializeStaticStorage
+      0x000022bc: 2014    	movs    r0, #20
+      0x000022be: 47f0    	blx     lr
+      suspend point dex PC: 0x0014
+      GC map objects:  v1 (r6), v2 (r7), v3 (r8)
+      0x000022c0: e7c1    	b       -126 (0x00002246)
+      0x000022c2: f8d9e150	ldr.w   lr, [r9, #336]  ; pResolveString
+      0x000022c6: 1c28    	mov     r0, r5
+      0x000022c8: 214b    	movs    r1, #75
+      0x000022ca: 47f0    	blx     lr
+      suspend point dex PC: 0x001a
+      GC map objects:  v1 (r6), v2 (r7), v3 (r8)
+      0x000022cc: e7d2    	b       -92 (0x00002274)
+      0x000022ce: f8d9e230	ldr.w   lr, [r9, #560]  ; pTestSuspend
+      0x000022d2: 47f0    	blx     lr
+      suspend point dex PC: 0x0024
+      0x000022d4: e7ed    	b       -38 (0x000022b2)
+      0x000022d6: 0000    	lsls    r0, r0, #0
+3: Lcom/ljj/fixtest/R$attr; (offset=0x00001234) (type_idx=9) (StatusInitialized) (OatClassAllCompiled)
+  0: void com.ljj.fixtest.R$attr.<init>() (dex_method_idx=12)
+    DEX CODE:
+      0x0000: invoke-direct {v0}, void java.lang.Object.<init>() // method@24
+      0x0003: return-void
+    OatMethodOffsets (offset=0x00001238)
+      code_offset: 0x0000201d 
+      gc_map: (offset=0x0000127c)
+    OatQuickMethodHeader (offset=0x00002000)
+      mapping_table: (offset=0x0000130d)
+      vmap_table: (offset=0x00001377)
+      v0/r5, v65534/r6, v65535/r15
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 32
+      core_spill_mask: 0x00008060 (r5, r6, r15)
+      fp_spill_mask: 0x00000000 
+    CODE: (code_offset=0x0000201d size_offset=0x00002018 size=60)...
+      0x0000201c: f5bd5c00	subs    r12, sp, #8192
+      0x00002020: f8dcc000	ldr.w   r12, [r12, #0]
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002024: e92d4060	push    {r5, r6, lr}
+      0x00002028: b085    	sub     sp, sp, #20
+      0x0000202a: 1c06    	mov     r6, r0
+      0x0000202c: 9000    	str     r0, [sp, #0]
+      0x0000202e: 1c0d    	mov     r5, r1
+      0x00002030: f2410e75	movw    lr, #4213
+      0x00002034: f2c73e3b	movt    lr, #29499
+      0x00002038: f24a1098	movw    r0, #41368
+      0x0000203c: f2c71006	movt    r0, #28934
+      0x00002040: 1c29    	mov     r1, r5
+      0x00002042: 47f0    	blx     lr
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002044: 3c01    	subs    r4, #1
+      0x00002046: f0008003	beq.w   +6 (0x00002050)
+      0x0000204a: b005    	add     sp, sp, #20
+      0x0000204c: e8bd8060	pop     {r5, r6, pc}
+      0x00002050: f8d9e230	ldr.w   lr, [r9, #560]  ; pTestSuspend
+      0x00002054: 47f0    	blx     lr
+      suspend point dex PC: 0x0003
+      0x00002056: e7f8    	b       -16 (0x0000204a)
+4: Lcom/ljj/fixtest/R$color; (offset=0x0000123c) (type_idx=10) (StatusVerified) (OatClassAllCompiled)
+  0: void com.ljj.fixtest.R$color.<init>() (dex_method_idx=13)
+    DEX CODE:
+      0x0000: invoke-direct {v0}, void java.lang.Object.<init>() // method@24
+      0x0003: return-void
+    OatMethodOffsets (offset=0x00001240)
+      code_offset: 0x0000201d 
+      gc_map: (offset=0x0000127c)
+    OatQuickMethodHeader (offset=0x00002000)
+      mapping_table: (offset=0x0000130d)
+      vmap_table: (offset=0x00001377)
+      v0/r5, v65534/r6, v65535/r15
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 32
+      core_spill_mask: 0x00008060 (r5, r6, r15)
+      fp_spill_mask: 0x00000000 
+    CODE: (code_offset=0x0000201d size_offset=0x00002018 size=60)...
+      0x0000201c: f5bd5c00	subs    r12, sp, #8192
+      0x00002020: f8dcc000	ldr.w   r12, [r12, #0]
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002024: e92d4060	push    {r5, r6, lr}
+      0x00002028: b085    	sub     sp, sp, #20
+      0x0000202a: 1c06    	mov     r6, r0
+      0x0000202c: 9000    	str     r0, [sp, #0]
+      0x0000202e: 1c0d    	mov     r5, r1
+      0x00002030: f2410e75	movw    lr, #4213
+      0x00002034: f2c73e3b	movt    lr, #29499
+      0x00002038: f24a1098	movw    r0, #41368
+      0x0000203c: f2c71006	movt    r0, #28934
+      0x00002040: 1c29    	mov     r1, r5
+      0x00002042: 47f0    	blx     lr
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002044: 3c01    	subs    r4, #1
+      0x00002046: f0008003	beq.w   +6 (0x00002050)
+      0x0000204a: b005    	add     sp, sp, #20
+      0x0000204c: e8bd8060	pop     {r5, r6, pc}
+      0x00002050: f8d9e230	ldr.w   lr, [r9, #560]  ; pTestSuspend
+      0x00002054: 47f0    	blx     lr
+      suspend point dex PC: 0x0003
+      0x00002056: e7f8    	b       -16 (0x0000204a)
+5: Lcom/ljj/fixtest/R$id; (offset=0x00001244) (type_idx=11) (StatusVerified) (OatClassAllCompiled)
+  0: void com.ljj.fixtest.R$id.<init>() (dex_method_idx=14)
+    DEX CODE:
+      0x0000: invoke-direct {v0}, void java.lang.Object.<init>() // method@24
+      0x0003: return-void
+    OatMethodOffsets (offset=0x00001248)
+      code_offset: 0x0000201d 
+      gc_map: (offset=0x0000127c)
+    OatQuickMethodHeader (offset=0x00002000)
+      mapping_table: (offset=0x0000130d)
+      vmap_table: (offset=0x00001377)
+      v0/r5, v65534/r6, v65535/r15
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 32
+      core_spill_mask: 0x00008060 (r5, r6, r15)
+      fp_spill_mask: 0x00000000 
+    CODE: (code_offset=0x0000201d size_offset=0x00002018 size=60)...
+      0x0000201c: f5bd5c00	subs    r12, sp, #8192
+      0x00002020: f8dcc000	ldr.w   r12, [r12, #0]
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002024: e92d4060	push    {r5, r6, lr}
+      0x00002028: b085    	sub     sp, sp, #20
+      0x0000202a: 1c06    	mov     r6, r0
+      0x0000202c: 9000    	str     r0, [sp, #0]
+      0x0000202e: 1c0d    	mov     r5, r1
+      0x00002030: f2410e75	movw    lr, #4213
+      0x00002034: f2c73e3b	movt    lr, #29499
+      0x00002038: f24a1098	movw    r0, #41368
+      0x0000203c: f2c71006	movt    r0, #28934
+      0x00002040: 1c29    	mov     r1, r5
+      0x00002042: 47f0    	blx     lr
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002044: 3c01    	subs    r4, #1
+      0x00002046: f0008003	beq.w   +6 (0x00002050)
+      0x0000204a: b005    	add     sp, sp, #20
+      0x0000204c: e8bd8060	pop     {r5, r6, pc}
+      0x00002050: f8d9e230	ldr.w   lr, [r9, #560]  ; pTestSuspend
+      0x00002054: 47f0    	blx     lr
+      suspend point dex PC: 0x0003
+      0x00002056: e7f8    	b       -16 (0x0000204a)
+6: Lcom/ljj/fixtest/R$layout; (offset=0x0000124c) (type_idx=12) (StatusVerified) (OatClassAllCompiled)
+  0: void com.ljj.fixtest.R$layout.<init>() (dex_method_idx=15)
+    DEX CODE:
+      0x0000: invoke-direct {v0}, void java.lang.Object.<init>() // method@24
+      0x0003: return-void
+    OatMethodOffsets (offset=0x00001250)
+      code_offset: 0x0000201d 
+      gc_map: (offset=0x0000127c)
+    OatQuickMethodHeader (offset=0x00002000)
+      mapping_table: (offset=0x0000130d)
+      vmap_table: (offset=0x00001377)
+      v0/r5, v65534/r6, v65535/r15
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 32
+      core_spill_mask: 0x00008060 (r5, r6, r15)
+      fp_spill_mask: 0x00000000 
+    CODE: (code_offset=0x0000201d size_offset=0x00002018 size=60)...
+      0x0000201c: f5bd5c00	subs    r12, sp, #8192
+      0x00002020: f8dcc000	ldr.w   r12, [r12, #0]
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002024: e92d4060	push    {r5, r6, lr}
+      0x00002028: b085    	sub     sp, sp, #20
+      0x0000202a: 1c06    	mov     r6, r0
+      0x0000202c: 9000    	str     r0, [sp, #0]
+      0x0000202e: 1c0d    	mov     r5, r1
+      0x00002030: f2410e75	movw    lr, #4213
+      0x00002034: f2c73e3b	movt    lr, #29499
+      0x00002038: f24a1098	movw    r0, #41368
+      0x0000203c: f2c71006	movt    r0, #28934
+      0x00002040: 1c29    	mov     r1, r5
+      0x00002042: 47f0    	blx     lr
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002044: 3c01    	subs    r4, #1
+      0x00002046: f0008003	beq.w   +6 (0x00002050)
+      0x0000204a: b005    	add     sp, sp, #20
+      0x0000204c: e8bd8060	pop     {r5, r6, pc}
+      0x00002050: f8d9e230	ldr.w   lr, [r9, #560]  ; pTestSuspend
+      0x00002054: 47f0    	blx     lr
+      suspend point dex PC: 0x0003
+      0x00002056: e7f8    	b       -16 (0x0000204a)
+7: Lcom/ljj/fixtest/R$mipmap; (offset=0x00001254) (type_idx=13) (StatusVerified) (OatClassAllCompiled)
+  0: void com.ljj.fixtest.R$mipmap.<init>() (dex_method_idx=16)
+    DEX CODE:
+      0x0000: invoke-direct {v0}, void java.lang.Object.<init>() // method@24
+      0x0003: return-void
+    OatMethodOffsets (offset=0x00001258)
+      code_offset: 0x0000201d 
+      gc_map: (offset=0x0000127c)
+    OatQuickMethodHeader (offset=0x00002000)
+      mapping_table: (offset=0x0000130d)
+      vmap_table: (offset=0x00001377)
+      v0/r5, v65534/r6, v65535/r15
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 32
+      core_spill_mask: 0x00008060 (r5, r6, r15)
+      fp_spill_mask: 0x00000000 
+    CODE: (code_offset=0x0000201d size_offset=0x00002018 size=60)...
+      0x0000201c: f5bd5c00	subs    r12, sp, #8192
+      0x00002020: f8dcc000	ldr.w   r12, [r12, #0]
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002024: e92d4060	push    {r5, r6, lr}
+      0x00002028: b085    	sub     sp, sp, #20
+      0x0000202a: 1c06    	mov     r6, r0
+      0x0000202c: 9000    	str     r0, [sp, #0]
+      0x0000202e: 1c0d    	mov     r5, r1
+      0x00002030: f2410e75	movw    lr, #4213
+      0x00002034: f2c73e3b	movt    lr, #29499
+      0x00002038: f24a1098	movw    r0, #41368
+      0x0000203c: f2c71006	movt    r0, #28934
+      0x00002040: 1c29    	mov     r1, r5
+      0x00002042: 47f0    	blx     lr
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002044: 3c01    	subs    r4, #1
+      0x00002046: f0008003	beq.w   +6 (0x00002050)
+      0x0000204a: b005    	add     sp, sp, #20
+      0x0000204c: e8bd8060	pop     {r5, r6, pc}
+      0x00002050: f8d9e230	ldr.w   lr, [r9, #560]  ; pTestSuspend
+      0x00002054: 47f0    	blx     lr
+      suspend point dex PC: 0x0003
+      0x00002056: e7f8    	b       -16 (0x0000204a)
+8: Lcom/ljj/fixtest/R$string; (offset=0x0000125c) (type_idx=14) (StatusVerified) (OatClassAllCompiled)
+  0: void com.ljj.fixtest.R$string.<init>() (dex_method_idx=17)
+    DEX CODE:
+      0x0000: invoke-direct {v0}, void java.lang.Object.<init>() // method@24
+      0x0003: return-void
+    OatMethodOffsets (offset=0x00001260)
+      code_offset: 0x0000201d 
+      gc_map: (offset=0x0000127c)
+    OatQuickMethodHeader (offset=0x00002000)
+      mapping_table: (offset=0x0000130d)
+      vmap_table: (offset=0x00001377)
+      v0/r5, v65534/r6, v65535/r15
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 32
+      core_spill_mask: 0x00008060 (r5, r6, r15)
+      fp_spill_mask: 0x00000000 
+    CODE: (code_offset=0x0000201d size_offset=0x00002018 size=60)...
+      0x0000201c: f5bd5c00	subs    r12, sp, #8192
+      0x00002020: f8dcc000	ldr.w   r12, [r12, #0]
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002024: e92d4060	push    {r5, r6, lr}
+      0x00002028: b085    	sub     sp, sp, #20
+      0x0000202a: 1c06    	mov     r6, r0
+      0x0000202c: 9000    	str     r0, [sp, #0]
+      0x0000202e: 1c0d    	mov     r5, r1
+      0x00002030: f2410e75	movw    lr, #4213
+      0x00002034: f2c73e3b	movt    lr, #29499
+      0x00002038: f24a1098	movw    r0, #41368
+      0x0000203c: f2c71006	movt    r0, #28934
+      0x00002040: 1c29    	mov     r1, r5
+      0x00002042: 47f0    	blx     lr
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002044: 3c01    	subs    r4, #1
+      0x00002046: f0008003	beq.w   +6 (0x00002050)
+      0x0000204a: b005    	add     sp, sp, #20
+      0x0000204c: e8bd8060	pop     {r5, r6, pc}
+      0x00002050: f8d9e230	ldr.w   lr, [r9, #560]  ; pTestSuspend
+      0x00002054: 47f0    	blx     lr
+      suspend point dex PC: 0x0003
+      0x00002056: e7f8    	b       -16 (0x0000204a)
+9: Lcom/ljj/fixtest/R; (offset=0x00001264) (type_idx=15) (StatusInitialized) (OatClassAllCompiled)
+  0: void com.ljj.fixtest.R.<init>() (dex_method_idx=18)
+    DEX CODE:
+      0x0000: invoke-direct {v0}, void java.lang.Object.<init>() // method@24
+      0x0003: return-void
+    OatMethodOffsets (offset=0x00001268)
+      code_offset: 0x0000201d 
+      gc_map: (offset=0x0000127c)
+    OatQuickMethodHeader (offset=0x00002000)
+      mapping_table: (offset=0x0000130d)
+      vmap_table: (offset=0x00001377)
+      v0/r5, v65534/r6, v65535/r15
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 32
+      core_spill_mask: 0x00008060 (r5, r6, r15)
+      fp_spill_mask: 0x00000000 
+    CODE: (code_offset=0x0000201d size_offset=0x00002018 size=60)...
+      0x0000201c: f5bd5c00	subs    r12, sp, #8192
+      0x00002020: f8dcc000	ldr.w   r12, [r12, #0]
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002024: e92d4060	push    {r5, r6, lr}
+      0x00002028: b085    	sub     sp, sp, #20
+      0x0000202a: 1c06    	mov     r6, r0
+      0x0000202c: 9000    	str     r0, [sp, #0]
+      0x0000202e: 1c0d    	mov     r5, r1
+      0x00002030: f2410e75	movw    lr, #4213
+      0x00002034: f2c73e3b	movt    lr, #29499
+      0x00002038: f24a1098	movw    r0, #41368
+      0x0000203c: f2c71006	movt    r0, #28934
+      0x00002040: 1c29    	mov     r1, r5
+      0x00002042: 47f0    	blx     lr
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002044: 3c01    	subs    r4, #1
+      0x00002046: f0008003	beq.w   +6 (0x00002050)
+      0x0000204a: b005    	add     sp, sp, #20
+      0x0000204c: e8bd8060	pop     {r5, r6, pc}
+      0x00002050: f8d9e230	ldr.w   lr, [r9, #560]  ; pTestSuspend
+      0x00002054: 47f0    	blx     lr
+      suspend point dex PC: 0x0003
+      0x00002056: e7f8    	b       -16 (0x0000204a)
+10: Lcom/ljj/fixtest/Test; (offset=0x0000126c) (type_idx=16) (StatusInitialized) (OatClassAllCompiled)
+  0: void com.ljj.fixtest.Test.<init>() (dex_method_idx=19)
+    DEX CODE:
+      0x0000: invoke-direct {v0}, void java.lang.Object.<init>() // method@24
+      0x0003: return-void
+    OatMethodOffsets (offset=0x00001270)
+      code_offset: 0x0000201d 
+      gc_map: (offset=0x0000127c)
+    OatQuickMethodHeader (offset=0x00002000)
+      mapping_table: (offset=0x0000130d)
+      vmap_table: (offset=0x00001377)
+      v0/r5, v65534/r6, v65535/r15
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 32
+      core_spill_mask: 0x00008060 (r5, r6, r15)
+      fp_spill_mask: 0x00000000 
+    CODE: (code_offset=0x0000201d size_offset=0x00002018 size=60)...
+      0x0000201c: f5bd5c00	subs    r12, sp, #8192
+      0x00002020: f8dcc000	ldr.w   r12, [r12, #0]
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002024: e92d4060	push    {r5, r6, lr}
+      0x00002028: b085    	sub     sp, sp, #20
+      0x0000202a: 1c06    	mov     r6, r0
+      0x0000202c: 9000    	str     r0, [sp, #0]
+      0x0000202e: 1c0d    	mov     r5, r1
+      0x00002030: f2410e75	movw    lr, #4213
+      0x00002034: f2c73e3b	movt    lr, #29499
+      0x00002038: f24a1098	movw    r0, #41368
+      0x0000203c: f2c71006	movt    r0, #28934
+      0x00002040: 1c29    	mov     r1, r5
+      0x00002042: 47f0    	blx     lr
+      suspend point dex PC: 0x0000
+      GC map objects:  v0 (r5)
+      0x00002044: 3c01    	subs    r4, #1
+      0x00002046: f0008003	beq.w   +6 (0x00002050)
+      0x0000204a: b005    	add     sp, sp, #20
+      0x0000204c: e8bd8060	pop     {r5, r6, pc}
+      0x00002050: f8d9e230	ldr.w   lr, [r9, #560]  ; pTestSuspend
+      0x00002054: 47f0    	blx     lr
+      suspend point dex PC: 0x0003
+      0x00002056: e7f8    	b       -16 (0x0000204a)
+  1: java.lang.String com.ljj.fixtest.Test.showTest1() (dex_method_idx=20)
+    DEX CODE:
+      0x0000: const-string v0, "ljj" // string@69
+      0x0002: const-string v1, "showTest1: " // string@79
+      0x0004: invoke-static {v0, v1}, int android.util.Log.i(java.lang.String, java.lang.String) // method@5
+      0x0007: const-string v0, "ljj" // string@69
+      0x0009: const-string v1, "showTest2: " // string@80
+      0x000b: invoke-static {v0, v1}, int android.util.Log.i(java.lang.String, java.lang.String) // method@5
+      0x000e: const-string v0, "ljj" // string@69
+      0x0010: const-string v1, "showTest3: " // string@81
+      0x0012: invoke-static {v0, v1}, int android.util.Log.i(java.lang.String, java.lang.String) // method@5
+      0x0015: const-string v0, "art address error" // string@53
+      0x0017: return-object v0
+    OatMethodOffsets (offset=0x00001274)
+      code_offset: 0x000022f5 
+      gc_map: (offset=0x000012cd)
+    OatQuickMethodHeader (offset=0x000022d8)
+      mapping_table: (offset=0x00001347)
+      vmap_table: (offset=0x00001387)
+      v0/r5, v1/r6, v65534/r7, v65535/r15
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 48
+      core_spill_mask: 0x000080e0 (r5, r6, r7, r15)
+      fp_spill_mask: 0x00000000 
+    CODE: (code_offset=0x000022f5 size_offset=0x000022f0 size=284)...
+      0x000022f4: f5bd5c00	subs    r12, sp, #8192
+      0x000022f8: f8dcc000	ldr.w   r12, [r12, #0]
+      suspend point dex PC: 0x0000
+      GC map objects:  v2 ([sp + #52])
+      0x000022fc: e92d40e0	push    {r5, r6, r7, lr}
+      0x00002300: b088    	sub     sp, sp, #32
+      0x00002302: 1c07    	mov     r7, r0
+      0x00002304: 9000    	str     r0, [sp, #0]
+      0x00002306: 910d    	str     r1, [sp, #52]
+      0x00002308: 68b8    	ldr     r0, [r7, #8]
+      0x0000230a: 6940    	ldr     r0, [r0, #20]
+      0x0000230c: f8d00120	ldr.w   r0, [r0, #288]
+      0x00002310: 2800    	cmp     r0, #0
+      0x00002312: d04f    	beq     +158 (0x000023b4)
+      0x00002314: 1c05    	mov     r5, r0
+      0x00002316: 68b8    	ldr     r0, [r7, #8]
+      0x00002318: 6940    	ldr     r0, [r0, #20]
+      0x0000231a: f8d00148	ldr.w   r0, [r0, #328]
+      0x0000231e: 2800    	cmp     r0, #0
+      0x00002320: d04e    	beq     +156 (0x000023c0)
+      0x00002322: 1c06    	mov     r6, r0
+      0x00002324: f2443e5d	movw    lr, #17245
+      0x00002328: f2c74e1d	movt    lr, #29725
+      0x0000232c: f64a2018	movw    r0, #43544
+      0x00002330: f2c71017	movt    r0, #28951
+      0x00002334: 1c29    	mov     r1, r5
+      0x00002336: 1c32    	mov     r2, r6
+      0x00002338: 47f0    	blx     lr
+      suspend point dex PC: 0x0004
+      GC map objects:  v0 (r5), v1 (r6), v2 ([sp + #52])
+      0x0000233a: 68b8    	ldr     r0, [r7, #8]
+      0x0000233c: 6940    	ldr     r0, [r0, #20]
+      0x0000233e: f8d00120	ldr.w   r0, [r0, #288]
+      0x00002342: 2800    	cmp     r0, #0
+      0x00002344: d042    	beq     +132 (0x000023cc)
+      0x00002346: 1c05    	mov     r5, r0
+      0x00002348: 68b8    	ldr     r0, [r7, #8]
+      0x0000234a: 6940    	ldr     r0, [r0, #20]
+      0x0000234c: f8d0014c	ldr.w   r0, [r0, #332]
+      0x00002350: 2800    	cmp     r0, #0
+      0x00002352: d041    	beq     +130 (0x000023d8)
+      0x00002354: 1c06    	mov     r6, r0
+      0x00002356: f2443e5d	movw    lr, #17245
+      0x0000235a: f2c74e1d	movt    lr, #29725
+      0x0000235e: f64a2018	movw    r0, #43544
+      0x00002362: f2c71017	movt    r0, #28951
+      0x00002366: 1c29    	mov     r1, r5
+      0x00002368: 1c32    	mov     r2, r6
+      0x0000236a: 47f0    	blx     lr
+      suspend point dex PC: 0x000b
+      GC map objects:  v0 (r5), v1 (r6), v2 ([sp + #52])
+      0x0000236c: 68b8    	ldr     r0, [r7, #8]
+      0x0000236e: 6940    	ldr     r0, [r0, #20]
+      0x00002370: f8d00120	ldr.w   r0, [r0, #288]
+      0x00002374: b3b0    	cbz     r0, +108 (0x000023e4)
+      0x00002376: 1c05    	mov     r5, r0
+      0x00002378: 68b8    	ldr     r0, [r7, #8]
+      0x0000237a: 6940    	ldr     r0, [r0, #20]
+      0x0000237c: f8d00150	ldr.w   r0, [r0, #336]
+      0x00002380: b3b0    	cbz     r0, +108 (0x000023f0)
+      0x00002382: 1c06    	mov     r6, r0
+      0x00002384: f2443e5d	movw    lr, #17245
+      0x00002388: f2c74e1d	movt    lr, #29725
+      0x0000238c: f64a2018	movw    r0, #43544
+      0x00002390: f2c71017	movt    r0, #28951
+      0x00002394: 1c29    	mov     r1, r5
+      0x00002396: 1c32    	mov     r2, r6
+      0x00002398: 47f0    	blx     lr
+      suspend point dex PC: 0x0012
+      GC map objects:  v0 (r5), v1 (r6), v2 ([sp + #52])
+      0x0000239a: 68b8    	ldr     r0, [r7, #8]
+      0x0000239c: 6940    	ldr     r0, [r0, #20]
+      0x0000239e: f8d000e0	ldr.w   r0, [r0, #224]
+      0x000023a2: b358    	cbz     r0, +86 (0x000023fc)
+      0x000023a4: 1c05    	mov     r5, r0
+      0x000023a6: 3c01    	subs    r4, #1
+      0x000023a8: f000802e	beq.w   +92 (0x00002408)
+      0x000023ac: 1c28    	mov     r0, r5
+      0x000023ae: b008    	add     sp, sp, #32
+      0x000023b0: e8bd80e0	pop     {r5, r6, r7, pc}
+      0x000023b4: f8d9e150	ldr.w   lr, [r9, #336]  ; pResolveString
+      0x000023b8: 1c38    	mov     r0, r7
+      0x000023ba: 2145    	movs    r1, #69
+      0x000023bc: 47f0    	blx     lr
+      suspend point dex PC: 0x0000
+      GC map objects:  v2 ([sp + #52])
+      0x000023be: e7a9    	b       -174 (0x00002314)
+      0x000023c0: f8d9e150	ldr.w   lr, [r9, #336]  ; pResolveString
+      0x000023c4: 1c38    	mov     r0, r7
+      0x000023c6: 214f    	movs    r1, #79
+      0x000023c8: 47f0    	blx     lr
+      suspend point dex PC: 0x0002
+      GC map objects:  v0 (r5), v2 ([sp + #52])
+      0x000023ca: e7aa    	b       -172 (0x00002322)
+      0x000023cc: f8d9e150	ldr.w   lr, [r9, #336]  ; pResolveString
+      0x000023d0: 1c38    	mov     r0, r7
+      0x000023d2: 2145    	movs    r1, #69
+      0x000023d4: 47f0    	blx     lr
+      suspend point dex PC: 0x0007
+      GC map objects:  v0 (r5), v1 (r6), v2 ([sp + #52])
+      0x000023d6: e7b6    	b       -148 (0x00002346)
+      0x000023d8: f8d9e150	ldr.w   lr, [r9, #336]  ; pResolveString
+      0x000023dc: 1c38    	mov     r0, r7
+      0x000023de: 2150    	movs    r1, #80
+      0x000023e0: 47f0    	blx     lr
+      suspend point dex PC: 0x0009
+      GC map objects:  v0 (r5), v1 (r6), v2 ([sp + #52])
+      0x000023e2: e7b7    	b       -146 (0x00002354)
+      0x000023e4: f8d9e150	ldr.w   lr, [r9, #336]  ; pResolveString
+      0x000023e8: 1c38    	mov     r0, r7
+      0x000023ea: 2145    	movs    r1, #69
+      0x000023ec: 47f0    	blx     lr
+      suspend point dex PC: 0x000e
+      GC map objects:  v0 (r5), v1 (r6), v2 ([sp + #52])
+      0x000023ee: e7c2    	b       -124 (0x00002376)
+      0x000023f0: f8d9e150	ldr.w   lr, [r9, #336]  ; pResolveString
+      0x000023f4: 1c38    	mov     r0, r7
+      0x000023f6: 2151    	movs    r1, #81
+      0x000023f8: 47f0    	blx     lr
+      suspend point dex PC: 0x0010
+      GC map objects:  v0 (r5), v1 (r6), v2 ([sp + #52])
+      0x000023fa: e7c2    	b       -124 (0x00002382)
+      0x000023fc: f8d9e150	ldr.w   lr, [r9, #336]  ; pResolveString
+      0x00002400: 1c38    	mov     r0, r7
+      0x00002402: 2135    	movs    r1, #53
+      0x00002404: 47f0    	blx     lr
+      suspend point dex PC: 0x0015
+      GC map objects:  v0 (r5), v1 (r6), v2 ([sp + #52])
+      0x00002406: e7cd    	b       -102 (0x000023a4)
+      0x00002408: f8d9e230	ldr.w   lr, [r9, #560]  ; pTestSuspend
+      0x0000240c: 47f0    	blx     lr
+      suspend point dex PC: 0x0017
+      GC map objects:  v0 (r5)
+      0x0000240e: e7cd    	b       -102 (0x000023ac)
+  2: java.lang.String com.ljj.fixtest.Test.showText(int) (dex_method_idx=21)
+    DEX CODE:
+      0x0000: new-instance v0, java.lang.StringBuilder // type@24
+      0x0002: invoke-direct {v0}, void java.lang.StringBuilder.<init>() // method@25
+      0x0005: const-string v1, "I am an error" // string@10
+      0x0007: invoke-virtual {v0, v1}, java.lang.StringBuilder java.lang.StringBuilder.append(java.lang.String) // method@27
+      0x000a: move-result-object v0
+      0x000b: invoke-virtual {v0, v3}, java.lang.StringBuilder java.lang.StringBuilder.append(int) // method@26
+      0x000e: move-result-object v0
+      0x000f: invoke-virtual {v0}, java.lang.String java.lang.StringBuilder.toString() // method@28
+      0x0012: move-result-object v0
+      0x0013: return-object v0
+    OatMethodOffsets (offset=0x00001278)
+      code_offset: 0x0000242d 
+      gc_map: (offset=0x000012f5)
+    OatQuickMethodHeader (offset=0x00002410)
+      mapping_table: (offset=0x00001361)
+      vmap_table: (offset=0x0000138c)
+      v0/r5, v65534/r6, v1/r7, v3/r8, v65535/r15
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 48
+      core_spill_mask: 0x000081e0 (r5, r6, r7, r8, r15)
+      fp_spill_mask: 0x00000000 
+    CODE: (code_offset=0x0000242d size_offset=0x00002428 size=184)...
+      0x0000242c: f5bd5c00	subs    r12, sp, #8192
+      0x00002430: f8dcc000	ldr.w   r12, [r12, #0]
+      suspend point dex PC: 0x0000
+      GC map objects:  v2 ([sp + #52])
+      0x00002434: e92d41e0	push    {r5, r6, r7, r8, lr}
+      0x00002438: b087    	sub     sp, sp, #28
+      0x0000243a: 1c06    	mov     r6, r0
+      0x0000243c: 9000    	str     r0, [sp, #0]
+      0x0000243e: 910d    	str     r1, [sp, #52]
+      0x00002440: 4690    	mov     r8, r2
+      0x00002442: f8d9e12c	ldr.w   lr, [r9, #300]  ; pAllocObjectInitialized
+      0x00002446: 1c31    	mov     r1, r6
+      0x00002448: f6455068	movw    r0, #23912
+      0x0000244c: f2c71073	movt    r0, #29043
+      0x00002450: 47f0    	blx     lr
+      suspend point dex PC: 0x0000
+      GC map objects:  v2 ([sp + #52])
+      0x00002452: 1c05    	mov     r5, r0
+      0x00002454: f6426e9d	movw    lr, #11933
+      0x00002458: f2c73e43	movt    lr, #29507
+      0x0000245c: f6427078	movw    r0, #12152
+      0x00002460: f2c71008	movt    r0, #28936
+      0x00002464: 1c29    	mov     r1, r5
+      0x00002466: 47f0    	blx     lr
+      suspend point dex PC: 0x0002
+      GC map objects:  v0 (r5), v2 ([sp + #52])
+      0x00002468: 68b0    	ldr     r0, [r6, #8]
+      0x0000246a: 6940    	ldr     r0, [r0, #20]
+      0x0000246c: 6b40    	ldr     r0, [r0, #52]
+      0x0000246e: b370    	cbz     r0, +92 (0x000024ce)
+      0x00002470: 1c07    	mov     r7, r0
+      0x00002472: f6454e4d	movw    lr, #23629
+      0x00002476: f2c73e43	movt    lr, #29507
+      0x0000247a: f2433068	movw    r0, #13160
+      0x0000247e: f2c71008	movt    r0, #28936
+      0x00002482: 1c29    	mov     r1, r5
+      0x00002484: 1c3a    	mov     r2, r7
+      0x00002486: 47f0    	blx     lr
+      suspend point dex PC: 0x0007
+      GC map objects:  v0 (r5), v1 (r7), v2 ([sp + #52])
+      0x00002488: 1c05    	mov     r5, r0
+      0x0000248a: f2435e5d	movw    lr, #13661
+      0x0000248e: f2c73e43	movt    lr, #29507
+      0x00002492: f2432078	movw    r0, #12920
+      0x00002496: f2c71008	movt    r0, #28936
+      0x0000249a: 1c29    	mov     r1, r5
+      0x0000249c: 4642    	mov     r2, r8
+      0x0000249e: f8d1c000	ldr.w   r12, [r1, #0]
+      suspend point dex PC: 0x000b
+      GC map objects:  v0 (r5), v1 (r7), v2 ([sp + #52])
+      0x000024a2: 47f0    	blx     lr
+      suspend point dex PC: 0x000b
+      GC map objects:  v0 (r5), v1 (r7), v2 ([sp + #52])
+      0x000024a4: 1c05    	mov     r5, r0
+      0x000024a6: f6463edd	movw    lr, #27613
+      0x000024aa: f2c73e43	movt    lr, #29507
+      0x000024ae: f24310b8	movw    r0, #12728
+      0x000024b2: f2c71008	movt    r0, #28936
+      0x000024b6: 1c29    	mov     r1, r5
+      0x000024b8: f8d1c000	ldr.w   r12, [r1, #0]
+      suspend point dex PC: 0x000f
+      GC map objects:  v0 (r5), v1 (r7), v2 ([sp + #52])
+      0x000024bc: 47f0    	blx     lr
+      suspend point dex PC: 0x000f
+      GC map objects:  v0 (r5), v1 (r7), v2 ([sp + #52])
+      0x000024be: 1c05    	mov     r5, r0
+      0x000024c0: 3c01    	subs    r4, #1
+      0x000024c2: f000800a	beq.w   +20 (0x000024da)
+      0x000024c6: 1c28    	mov     r0, r5
+      0x000024c8: b007    	add     sp, sp, #28
+      0x000024ca: e8bd81e0	pop     {r5, r6, r7, r8, pc}
+      0x000024ce: f8d9e150	ldr.w   lr, [r9, #336]  ; pResolveString
+      0x000024d2: 1c30    	mov     r0, r6
+      0x000024d4: 210a    	movs    r1, #10
+      0x000024d6: 47f0    	blx     lr
+      suspend point dex PC: 0x0005
+      GC map objects:  v0 (r5), v2 ([sp + #52])
+      0x000024d8: e7ca    	b       -108 (0x00002470)
+      0x000024da: f8d9e230	ldr.w   lr, [r9, #560]  ; pTestSuspend
+      0x000024de: 47f0    	blx     lr
+      suspend point dex PC: 0x0013
+      GC map objects:  v0 (r5)
+      0x000024e0: e7f1    	b       -30 (0x000024c6)
+      0x000024e2: 0000    	lsls    r0, r0, #0

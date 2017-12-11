@@ -4,6 +4,7 @@ import java.io.File;
 
 import android.app.Application;
 import android.os.Environment;
+import android.util.Log;
 
 import com.ljj.patch.util.HotFix;
 
@@ -18,6 +19,7 @@ public class MyApplication extends Application{
     super.onCreate();
     HotFix.init(this);
     String dexPath= Environment.getExternalStorageDirectory().getAbsolutePath()+ File.separator+"patch.dex";
-    HotFix.inject(this,dexPath);
+    Log.i("ljj", "onCreate: "+Environment.getExternalStorageDirectory().getAbsolutePath());
+     HotFix.inject(this,dexPath);
   }
 }

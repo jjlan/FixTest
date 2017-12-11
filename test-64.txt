@@ -1,0 +1,424 @@
+MAGIC:
+oat
+079
+
+LOCATION:
+base.odex
+
+CHECKSUM:
+0xebde77e8
+
+INSTRUCTION SET:
+Arm64
+
+INSTRUCTION SET FEATURES:
+smp,a53
+
+DEX FILE COUNT:
+1
+
+EXECUTABLE OFFSET:
+0x00002000
+
+INTERPRETER TO INTERPRETER BRIDGE OFFSET:
+0x00000000
+
+INTERPRETER TO COMPILED CODE BRIDGE OFFSET:
+0x00000000
+
+JNI DLSYM LOOKUP OFFSET:
+0x00000000
+
+QUICK GENERIC JNI TRAMPOLINE OFFSET:
+0x00000000
+
+QUICK IMT CONFLICT TRAMPOLINE OFFSET:
+0x00000000
+
+QUICK RESOLUTION TRAMPOLINE OFFSET:
+0x00000000
+
+QUICK TO INTERPRETER BRIDGE OFFSET:
+0x00000000
+
+IMAGE PATCH DELTA:
+-5599232 (0xffaa9000)
+
+IMAGE FILE LOCATION OAT CHECKSUM:
+0xeb2b1120
+
+IMAGE FILE LOCATION OAT BEGIN:
+0x70942000
+
+KEY VALUE STORE:
+classpath = 
+compiler-filter = interpret-only
+debuggable = true
+dex2oat-cmdline = --zip-fd=6 --zip-location=base.apk --oat-fd=7 --oat-location=/data/app/vmdl2061431650.tmp/oat/arm64/base.odex --instruction-set=arm64 --instruction-set-variant=generic --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=interpret-only --swap-fd=9 --debuggable
+dex2oat-host = Arm
+has-patch-info = false
+image-location = /data/dalvik-cache/arm64/system@framework@boot.art:/data/dalvik-cache/arm64/system@framework@boot-core-libart.art:/data/dalvik-cache/arm64/system@framework@boot-conscrypt.art:/data/dalvik-cache/arm64/system@framework@boot-okhttp.art:/data/dalvik-cache/arm64/system@framework@boot-core-junit.art:/data/dalvik-cache/arm64/system@framework@boot-bouncycastle.art:/data/dalvik-cache/arm64/system@framework@boot-ext.art:/data/dalvik-cache/arm64/system@framework@boot-framework.art:/data/dalvik-cache/arm64/system@framework@boot-telephony-common.art:/data/dalvik-cache/arm64/system@framework@boot-voip-common.art:/data/dalvik-cache/arm64/system@framework@boot-ims-common.art:/data/dalvik-cache/arm64/system@framework@boot-apache-xml.art:/data/dalvik-cache/arm64/system@framework@boot-org.apache.http.legacy.boot.art
+native-debuggable = false
+pic = false
+
+SIZE:
+8244
+
+OatDexFile:
+location: base.apk
+checksum: 0x09a00c2e
+dex-file: 0x00000560..0x0000151f
+type-table: 0x00001520..0x0000159f
+0: Lcom/ljj/fixtest/BuildConfig; (offset=0x000015cc) (type_idx=6) (StatusVerified) (OatClassNoneCompiled)
+  0: void com.ljj.fixtest.BuildConfig.<clinit>() (dex_method_idx=6)
+    DEX CODE:
+      0x0000: 1a00 5700                	| const-string v0, "true" // string@87
+      0x0002: 7110 1800 0000           	| invoke-static {v0}, boolean java.lang.Boolean.parseBoolean(java.lang.String) // method@24
+      0x0005: 0a00                     	| move-result v0
+      0x0006: 6a00 0200                	| sput-boolean v0, Z com.ljj.fixtest.BuildConfig.DEBUG // field@2
+      0x0008: 7300                     	| return-void-no-barrier
+    OatMethodOffsets (offset=0x00000000)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00000000)
+      vmap_table: (offset=0x00000000)
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	locals: v0[sp + #4294967288]
+      	method*: v1[sp + #0]
+      	outs: v0[sp + #8]
+    CODE: (code_offset=0x00000000 size_offset=0x00000000 size=0)
+      NO CODE!
+  1: void com.ljj.fixtest.BuildConfig.<init>() (dex_method_idx=7)
+    DEX CODE:
+      0x0000: 7010 1900 0000           	| invoke-direct {v0}, void java.lang.Object.<init>() // method@25
+      0x0003: 7300                     	| return-void-no-barrier
+    OatMethodOffsets (offset=0x00000000)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00000000)
+      vmap_table: (offset=0x00000000)
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	ins: v0[sp + #8]
+      	method*: v1[sp + #0]
+      	outs: v0[sp + #8]
+    CODE: (code_offset=0x00000000 size_offset=0x00000000 size=0)
+      NO CODE!
+1: Lcom/ljj/fixtest/MainActivity; (offset=0x000015d0) (type_idx=7) (StatusVerified) (OatClassSomeCompiled)
+  0: void com.ljj.fixtest.MainActivity.<init>() (dex_method_idx=8)
+    DEX CODE:
+      0x0000: 7010 0000 0000           	| invoke-direct {v0}, void android.app.Activity.<init>() // method@0
+      0x0003: 7300                     	| return-void-no-barrier
+    OatMethodOffsets (offset=0x00000000)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00000000)
+      vmap_table: (offset=0x00000000)
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	ins: v0[sp + #8]
+      	method*: v1[sp + #0]
+      	outs: v0[sp + #8]
+    CODE: (code_offset=0x00000000 size_offset=0x00000000 size=0)
+      NO CODE!
+  1: void com.ljj.fixtest.MainActivity.onCreate(android.os.Bundle) (dex_method_idx=9)
+    DEX CODE:
+      0x0000: 6f20 0100 2100           	| invoke-super {v1, v2}, void android.app.Activity.onCreate(android.os.Bundle) // method@1
+      0x0003: 2200 1000                	| new-instance v0, com.ljj.fixtest.Test // type@16
+      0x0005: 7010 1300 0000           	| invoke-direct {v0}, void com.ljj.fixtest.Test.<init>() // method@19
+      0x0008: e910 0d00 0000           	| invoke-virtual-quick {v0},  // vtable@13
+      0x000b: 7300                     	| return-void-no-barrier
+    OatMethodOffsets (offset=0x000015dc)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00002000)
+      vmap_table: (offset=0x00001610)
+        quickened data
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	locals: v0[sp + #4294967288]
+      	ins: v1[sp + #8] v2[sp + #12]
+      	method*: v3[sp + #0]
+      	outs: v0[sp + #8] v1[sp + #12]
+    CODE: (code_offset=0x00000000 size_offset=0x00002010 size=0)
+      NO CODE!
+2: Lcom/ljj/fixtest/MyApplication; (offset=0x000015e0) (type_idx=8) (StatusVerified) (OatClassSomeCompiled)
+  0: void com.ljj.fixtest.MyApplication.<init>() (dex_method_idx=10)
+    DEX CODE:
+      0x0000: 7010 0200 0000           	| invoke-direct {v0}, void android.app.Application.<init>() // method@2
+      0x0003: 7300                     	| return-void-no-barrier
+    OatMethodOffsets (offset=0x00000000)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00000000)
+      vmap_table: (offset=0x00000000)
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	ins: v0[sp + #8]
+      	method*: v1[sp + #0]
+      	outs: v0[sp + #8]
+    CODE: (code_offset=0x00000000 size_offset=0x00000000 size=0)
+      NO CODE!
+  1: void com.ljj.fixtest.MyApplication.onCreate() (dex_method_idx=11)
+    DEX CODE:
+      0x0000: 6f10 0300 0300           	| invoke-super {v3}, void android.app.Application.onCreate() // method@3
+      0x0003: 2201 1800                	| new-instance v1, java.lang.StringBuilder // type@24
+      0x0005: 7010 1a00 0100           	| invoke-direct {v1}, void java.lang.StringBuilder.<init>() // method@26
+      0x0008: 7100 0400 0000           	| invoke-static {}, java.io.File android.os.Environment.getExternalStorageDirectory() // method@4
+      0x000b: 0c02                     	| move-result-object v2
+      0x000c: e910 1500 0200           	| invoke-virtual-quick {v2},  // vtable@21
+      0x000f: 0c02                     	| move-result-object v2
+      0x0010: e920 4e00 2100           	| invoke-virtual-quick {v1, v2},  // vtable@78
+      0x0013: 0c01                     	| move-result-object v1
+      0x0014: 6202 0e00                	| sget-object  v2, Ljava/lang/String; java.io.File.separator // field@14
+      0x0016: e920 4e00 2100           	| invoke-virtual-quick {v1, v2},  // vtable@78
+      0x0019: 0c01                     	| move-result-object v1
+      0x001a: 1a02 4a00                	| const-string v2, "patch.dex" // string@74
+      0x001c: e920 4e00 2100           	| invoke-virtual-quick {v1, v2},  // vtable@78
+      0x001f: 0c01                     	| move-result-object v1
+      0x0020: e910 0700 0100           	| invoke-virtual-quick {v1},  // vtable@7
+      0x0023: 0c00                     	| move-result-object v0
+      0x0024: 7300                     	| return-void-no-barrier
+    OatMethodOffsets (offset=0x000015ec)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00002020)
+      vmap_table: (offset=0x00001612)
+        quickened data
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	locals: v0[sp + #4294967280] v1[sp + #4294967284] v2[sp + #4294967288]
+      	ins: v3[sp + #8]
+      	method*: v4[sp + #0]
+      	outs: v0[sp + #8] v1[sp + #12]
+    CODE: (code_offset=0x00000000 size_offset=0x00002030 size=0)
+      NO CODE!
+3: Lcom/ljj/fixtest/R$attr; (offset=0x000015f0) (type_idx=9) (StatusInitialized) (OatClassNoneCompiled)
+  0: void com.ljj.fixtest.R$attr.<init>() (dex_method_idx=12)
+    DEX CODE:
+      0x0000: 7010 1900 0000           	| invoke-direct {v0}, void java.lang.Object.<init>() // method@25
+      0x0003: 7300                     	| return-void-no-barrier
+    OatMethodOffsets (offset=0x00000000)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00000000)
+      vmap_table: (offset=0x00000000)
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	ins: v0[sp + #8]
+      	method*: v1[sp + #0]
+      	outs: v0[sp + #8]
+    CODE: (code_offset=0x00000000 size_offset=0x00000000 size=0)
+      NO CODE!
+4: Lcom/ljj/fixtest/R$color; (offset=0x000015f4) (type_idx=10) (StatusVerified) (OatClassNoneCompiled)
+  0: void com.ljj.fixtest.R$color.<init>() (dex_method_idx=13)
+    DEX CODE:
+      0x0000: 7010 1900 0000           	| invoke-direct {v0}, void java.lang.Object.<init>() // method@25
+      0x0003: 7300                     	| return-void-no-barrier
+    OatMethodOffsets (offset=0x00000000)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00000000)
+      vmap_table: (offset=0x00000000)
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	ins: v0[sp + #8]
+      	method*: v1[sp + #0]
+      	outs: v0[sp + #8]
+    CODE: (code_offset=0x00000000 size_offset=0x00000000 size=0)
+      NO CODE!
+5: Lcom/ljj/fixtest/R$id; (offset=0x000015f8) (type_idx=11) (StatusVerified) (OatClassNoneCompiled)
+  0: void com.ljj.fixtest.R$id.<init>() (dex_method_idx=14)
+    DEX CODE:
+      0x0000: 7010 1900 0000           	| invoke-direct {v0}, void java.lang.Object.<init>() // method@25
+      0x0003: 7300                     	| return-void-no-barrier
+    OatMethodOffsets (offset=0x00000000)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00000000)
+      vmap_table: (offset=0x00000000)
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	ins: v0[sp + #8]
+      	method*: v1[sp + #0]
+      	outs: v0[sp + #8]
+    CODE: (code_offset=0x00000000 size_offset=0x00000000 size=0)
+      NO CODE!
+6: Lcom/ljj/fixtest/R$layout; (offset=0x000015fc) (type_idx=12) (StatusVerified) (OatClassNoneCompiled)
+  0: void com.ljj.fixtest.R$layout.<init>() (dex_method_idx=15)
+    DEX CODE:
+      0x0000: 7010 1900 0000           	| invoke-direct {v0}, void java.lang.Object.<init>() // method@25
+      0x0003: 7300                     	| return-void-no-barrier
+    OatMethodOffsets (offset=0x00000000)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00000000)
+      vmap_table: (offset=0x00000000)
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	ins: v0[sp + #8]
+      	method*: v1[sp + #0]
+      	outs: v0[sp + #8]
+    CODE: (code_offset=0x00000000 size_offset=0x00000000 size=0)
+      NO CODE!
+7: Lcom/ljj/fixtest/R$mipmap; (offset=0x00001600) (type_idx=13) (StatusVerified) (OatClassNoneCompiled)
+  0: void com.ljj.fixtest.R$mipmap.<init>() (dex_method_idx=16)
+    DEX CODE:
+      0x0000: 7010 1900 0000           	| invoke-direct {v0}, void java.lang.Object.<init>() // method@25
+      0x0003: 7300                     	| return-void-no-barrier
+    OatMethodOffsets (offset=0x00000000)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00000000)
+      vmap_table: (offset=0x00000000)
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	ins: v0[sp + #8]
+      	method*: v1[sp + #0]
+      	outs: v0[sp + #8]
+    CODE: (code_offset=0x00000000 size_offset=0x00000000 size=0)
+      NO CODE!
+8: Lcom/ljj/fixtest/R$string; (offset=0x00001604) (type_idx=14) (StatusVerified) (OatClassNoneCompiled)
+  0: void com.ljj.fixtest.R$string.<init>() (dex_method_idx=17)
+    DEX CODE:
+      0x0000: 7010 1900 0000           	| invoke-direct {v0}, void java.lang.Object.<init>() // method@25
+      0x0003: 7300                     	| return-void-no-barrier
+    OatMethodOffsets (offset=0x00000000)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00000000)
+      vmap_table: (offset=0x00000000)
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	ins: v0[sp + #8]
+      	method*: v1[sp + #0]
+      	outs: v0[sp + #8]
+    CODE: (code_offset=0x00000000 size_offset=0x00000000 size=0)
+      NO CODE!
+9: Lcom/ljj/fixtest/R; (offset=0x00001608) (type_idx=15) (StatusInitialized) (OatClassNoneCompiled)
+  0: void com.ljj.fixtest.R.<init>() (dex_method_idx=18)
+    DEX CODE:
+      0x0000: 7010 1900 0000           	| invoke-direct {v0}, void java.lang.Object.<init>() // method@25
+      0x0003: 7300                     	| return-void-no-barrier
+    OatMethodOffsets (offset=0x00000000)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00000000)
+      vmap_table: (offset=0x00000000)
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	ins: v0[sp + #8]
+      	method*: v1[sp + #0]
+      	outs: v0[sp + #8]
+    CODE: (code_offset=0x00000000 size_offset=0x00000000 size=0)
+      NO CODE!
+10: Lcom/ljj/fixtest/Test; (offset=0x0000160c) (type_idx=16) (StatusInitialized) (OatClassNoneCompiled)
+  0: void com.ljj.fixtest.Test.<init>() (dex_method_idx=19)
+    DEX CODE:
+      0x0000: 7010 1900 0000           	| invoke-direct {v0}, void java.lang.Object.<init>() // method@25
+      0x0003: 7300                     	| return-void-no-barrier
+    OatMethodOffsets (offset=0x00000000)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00000000)
+      vmap_table: (offset=0x00000000)
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	ins: v0[sp + #8]
+      	method*: v1[sp + #0]
+      	outs: v0[sp + #8]
+    CODE: (code_offset=0x00000000 size_offset=0x00000000 size=0)
+      NO CODE!
+  1: java.lang.String com.ljj.fixtest.Test.showTest1() (dex_method_idx=20)
+    DEX CODE:
+      0x0000: 1a00 4400                	| const-string v0, "ljj" // string@68
+      0x0002: 1a01 4e00                	| const-string v1, "showTest1: " // string@78
+      0x0004: 7120 0500 1000           	| invoke-static {v0, v1}, int android.util.Log.i(java.lang.String, java.lang.String) // method@5
+      0x0007: 1a00 4400                	| const-string v0, "ljj" // string@68
+      0x0009: 1a01 5000                	| const-string v1, "showTest2: " // string@80
+      0x000b: 7120 0500 1000           	| invoke-static {v0, v1}, int android.util.Log.i(java.lang.String, java.lang.String) // method@5
+      0x000e: 1a00 4400                	| const-string v0, "ljj" // string@68
+      0x0010: 1a01 5100                	| const-string v1, "showTest3: " // string@81
+      0x0012: 7120 0500 1000           	| invoke-static {v0, v1}, int android.util.Log.i(java.lang.String, java.lang.String) // method@5
+      0x0015: 1a00 3400                	| const-string v0, "art address error" // string@52
+      0x0017: 1100                     	| return-object v0
+    OatMethodOffsets (offset=0x00000000)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00000000)
+      vmap_table: (offset=0x00000000)
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	locals: v0[sp + #4294967284] v1[sp + #4294967288]
+      	ins: v2[sp + #8]
+      	method*: v3[sp + #0]
+      	outs: v0[sp + #8] v1[sp + #12]
+    CODE: (code_offset=0x00000000 size_offset=0x00000000 size=0)
+      NO CODE!
+  2: java.lang.String com.ljj.fixtest.Test.showTest2() (dex_method_idx=21)
+    DEX CODE:
+      0x0000: 1a00 3400                	| const-string v0, "art address error" // string@52
+      0x0002: 1100                     	| return-object v0
+    OatMethodOffsets (offset=0x00000000)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00000000)
+      vmap_table: (offset=0x00000000)
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	locals: v0[sp + #4294967288]
+      	ins: v1[sp + #8]
+      	method*: v2[sp + #0]
+    CODE: (code_offset=0x00000000 size_offset=0x00000000 size=0)
+      NO CODE!
+  3: java.lang.String com.ljj.fixtest.Test.showText() (dex_method_idx=22)
+    DEX CODE:
+      0x0000: 1a00 0a00                	| const-string v0, "I am an error" // string@10
+      0x0002: 1100                     	| return-object v0
+    OatMethodOffsets (offset=0x00000000)
+      code_offset: 0x00000000 
+    OatQuickMethodHeader (offset=0x00000000)
+      vmap_table: (offset=0x00000000)
+    QuickMethodFrameInfo
+      frame_size_in_bytes: 0
+      core_spill_mask: 0x00000000 
+      fp_spill_mask: 0x00000000 
+      vr_stack_locations:
+      	locals: v0[sp + #4294967288]
+      	ins: v1[sp + #8]
+      	method*: v2[sp + #0]
+    CODE: (code_offset=0x00000000 size_offset=0x00000000 size=0)
+      NO CODE!

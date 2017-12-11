@@ -14,7 +14,8 @@ public class Test {
     Log.i("ljj", "showTest3: ");
     return "art address error";
   }
+
   public String showText(){
-    return "I am an error";
+    return "I am an showText";
   }
 }
